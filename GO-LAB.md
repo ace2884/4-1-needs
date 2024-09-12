@@ -91,6 +91,7 @@ func main() {
 ## week4 : CALCULATE SD IN MATH PACKAGE
 
 ```go
+
 package main
 
 import (
@@ -121,6 +122,7 @@ func main() {
 ## week5 : PRINT FLOYD'S TRIANGLE
 
 ```go
+
 package main
 
 import "fmt"
@@ -140,6 +142,7 @@ func main() {
 	}
 
 }
+
 ```
 ## week6 : ADDITION OF TWO STRINGS
 
@@ -158,4 +161,35 @@ func main() {
 	fmt.Scanln(&second)
 	fmt.Print(first + second)
 }
+
 ```
+
+## week7 : CHECK WHETHER A STRING IS A PALINDROME OR NOT 
+
+```
+
+
+## week9 : CHECK WHETHER A STRING IS PALINDROME OR NOT
+
+```go
+
+package main 
+import "fmt" 
+func main(){
+var num[100] int 
+var temp,sum,avg int
+fmt.Print("Enter number of elements: ") 
+fmt.Scanln(&temp)
+for i := 0; i < temp; i++ { 
+fmt.Print("Enter the number : ") 
+fmt.Scanln(&num[i])
+sum += num[i]
+}
+avg = sum/temp
+fmt.Printf("The Average of entered %d number(s) is %d",temp,avg)
+}
+
+```
+
+
+
