@@ -42,10 +42,11 @@
    - **Example**: A software company might charge businesses a higher price than individual consumers for the same software.
   
    **Causes of Monopoly**:
-     - **Natural Monopolies**: High fixed costs make it inefficient for multiple firms to operate (e.g., utilities).
-     - **Technical Barriers**: Exclusive technology or proprietary knowledge gives one firm an advantage.
-     - **Legal Barriers**: Patents, copyrights, and government licenses protect a firm from competition.
-     - **Control of Resources**: Exclusive control over essential resources can create monopolies.
+     - *Natural Monopolies*: High fixed costs make it inefficient for multiple firms to operate (e.g., utilities).
+     - *Technical Barriers*: Exclusive technology or proprietary knowledge gives one firm an advantage.
+     - *Legal Barriers*: Patents, copyrights, and government licenses protect a firm from competition.
+     -  *Control of Resources*: Exclusive control over essential resources can create monopolies.
+     
    - **Example**: The public utility sector, where economies of scale make it cost-efficient for only one firm to operate.
   
 ## 5. **Importance of Marginal Cost in Decision-Making**:
