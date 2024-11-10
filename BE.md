@@ -292,9 +292,9 @@
      - Unlimited liability for general partnerships, though limited partnerships can limit some partners' liabilities.
    - Partnerships are beneficial for pooling resources and expertise but carry risks of disagreements and shared liability.
 
-8. **Joint Stock Companies**:
+## 8. **Joint Stock Companies**:
 
-    - Joint stock companies are organizations owned by shareholders with limited liability. These companies can raise capital by issuing shares, have a separate legal entity, and provide limited liability protection to shareholders.
+ - Joint stock companies are organizations owned by shareholders with limited liability. These companies can raise capital by issuing shares, have a separate legal entity, and provide limited liability protection to shareholders.
     - **Features**:
       - *Separate Legal Entity*: The company has a legal identity separate from its shareholders.
       - *Perpetual Succession*: The company continues regardless of changes in ownership.
@@ -302,25 +302,25 @@
     - Joint stock companies are suited for large-scale businesses, as they can raise significant capital and continue operating even if shareholders change.
 
 
-10. **Union Budget and Its Components**:
+## 9. **Union Budget and Its Components**:
     
-    - The Union Budget is the government’s annual financial statement, detailing its projected revenue and expenditures. It includes two main components:
+   - The Union Budget is the government’s annual financial statement, detailing its projected revenue and expenditures. It includes two main components:
       - *Revenue Budget*: Deals with revenue receipts (taxes and non-tax revenues) and revenue expenditures (day-to-day government operations).
       - *Capital Budget*: Includes capital receipts (loans, disinvestment) and capital expenditures (infrastructure development).
     - The Union Budget guides the government’s fiscal policies and economic planning for the financial year.
 
-11. **Public Sector Enterprises (PSEs)**:
+## 11. **Public Sector Enterprises (PSEs)**:
     
-    - Public Sector Enterprises are businesses owned by the government, often in industries requiring high capital investment or providing essential services (e.g., utilities, defense). PSEs aim to meet social objectives rather than solely focusing on profits.
+   - Public Sector Enterprises are businesses owned by the government, often in industries requiring high capital investment or providing essential services (e.g., utilities, defense). PSEs aim to meet social objectives rather than solely focusing on profits.
     - **Features**:
       - *Government Management*: Managed and funded by the government.
       - *Public Welfare Focus*: Serve the public by providing affordable services.
       - *Financial Independence*: PSEs generate their own revenue but can also receive government support.
     - PSEs contribute to economic stability, infrastructure, and employment in sectors critical for national development.
 
-12. **Stock Market Terminology**:
+## 12. **Stock Market Terminology**:
     
-    - Understanding stock market terms is essential for investors. Common terms include:
+   - Understanding stock market terms is essential for investors. Common terms include:
       - *Bull Market*: A period of rising stock prices.
       - *Bear Market*: A period of falling stock prices.
       - *Blue Chip Stock*: Shares of large, reputable companies with stable earnings.
