@@ -307,7 +307,8 @@
    - The Union Budget is the government’s annual financial statement, detailing its projected revenue and expenditures. It includes two main components:
       - *Revenue Budget*: Deals with revenue receipts (taxes and non-tax revenues) and revenue expenditures (day-to-day government operations).
       - *Capital Budget*: Includes capital receipts (loans, disinvestment) and capital expenditures (infrastructure development).
-    - The Union Budget guides the government’s fiscal policies and economic planning for the financial year.
+        
+   - The Union Budget guides the government’s fiscal policies and economic planning for the financial year.
 
 ## 11. **Public Sector Enterprises (PSEs)**:
     
@@ -325,6 +326,7 @@
       - *Bear Market*: A period of falling stock prices.
       - *Blue Chip Stock*: Shares of large, reputable companies with stable earnings.
       - *Market Capitalization*: The total value of a company’s outstanding shares.
-    - These terms help investors navigate the market, assess investment options, and understand market trends.
+        
+   - These terms help investors navigate the market, assess investment options, and understand market trends.
 
 
