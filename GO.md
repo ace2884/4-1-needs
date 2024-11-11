@@ -603,8 +603,6 @@ In this example, `ReadWriter` includes both the `Reader` and `Writer` interfaces
 
 ---
 
-# UNIT 4
-
 
 
 # UNIT 5
