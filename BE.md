@@ -833,14 +833,15 @@ Pricing methods determine how the final price of a product is calculated. They i
 
  - Joint stock companies are organizations owned by shareholders with limited liability. These companies can raise capital by issuing shares, have a separate legal entity, and provide limited liability protection to shareholders.
  -  A company owned jointly by shareholders where ownership is represented by transferabl
+ -  Joint stock companies are suited for large-scale businesses, as they can raise significant capital and continue operating even if shareholders change.
+ 
 
  **Features**:
-      - *Separate Legal Entity*: The company has a legal identity separate from its shareholders.
-      - *Perpetual Succession*: The company continues regardless of changes in ownership.
-      - *Transferable Shares*: Shares can be transferred without affecting company operations.
-      - *Incorporation*: Requires formal registration under the law.
-    - Joint stock companies are suited for large-scale businesses, as they can raise significant capital and continue operating even if shareholders change.
- 
+    - *Separate Legal Entity*: The company has a legal identity separate from its shareholders.
+    - *Perpetual Succession*: The company continues regardless of changes in ownership.
+    - *Transferable Shares*: Shares can be transferred without affecting company operations.
+    - *Incorporation*: Requires formal registration under the law.
+  
  **Types**:
   1. **Chartered Company**: Established by a royal charter.
   2. **Statutory Company**: Formed under a specific act of parliament.
