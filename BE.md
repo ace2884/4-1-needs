@@ -720,11 +720,11 @@ Pricing methods determine how the final price of a product is calculated. They i
    - **Example**: A company with high accounts receivable but low cash inflow may struggle to pay suppliers on time, affecting its creditworthiness and operations.
 
 
-##  ***Budgeting and Its Importance in Financial Planning:**
+## 12. **Budgeting and Its Importance in Financial Planning:**
   - Budgeting involves setting financial targets and allocating resources to achieve business goals. It aids in controlling expenditures, forecasting future financial needs, and ensuring funds are available for 
     operations and investments. Budgeting is vital for long-term financial health and strategic planning​
    
-## 12. **Techniques of Capital Budgeting**:
+## 13. **Techniques of Capital Budgeting**:
    
    - Capital budgeting helps evaluate long-term investments by estimating future cash flows, risk, and profitability. Common techniques include:
      - **Net Present Value (NPV)**: Compares the present value of cash inflows and outflows to determine profitability.
@@ -734,12 +734,12 @@ Pricing methods determine how the final price of a product is calculated. They i
    - **Example**: A retail chain might use NPV to decide on opening a new store by comparing expected cash inflows from sales with initial setup costs.
 
 
-## 13. **Capital Structure and Its Importance**:
+## 14. **Capital Structure and Its Importance**:
    - Capital structure refers to the mix of debt and equity used to finance a business. A balanced capital structure minimizes cost of capital while maximizing returns. Companies aim to maintain a structure that supports growth without incurring excessive debt risk.
    - **Example**: A company with high growth potential may rely on equity to avoid debt risk, while a stable company may use a mix of debt and equity for tax benefits and flexibility.
 
 
-## 14. **Role of Credit Control by RBI**:
+## 15. **Role of Credit Control by RBI**:
    - The Reserve Bank of India (RBI) uses credit control to manage the money supply and stabilize the economy. Methods include:
       - **Repo Rate**: The rate at which commercial banks borrow from the RBI. Increasing the repo rate makes borrowing costlier, reducing the money supply.
       - **Cash Reserve Ratio (CRR)**: The percentage of deposits banks must hold in reserve, influencing lending capacity.
