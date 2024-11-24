@@ -20,7 +20,7 @@ Management is a universal process essential to all organized, social, and econom
   
 ---
 
-### **define Management**
+### **Define Management**
 Management has been defined differently by various experts, highlighting its multifaceted nature.
 
 1. **George R. Terry**: 
