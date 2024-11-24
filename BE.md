@@ -385,9 +385,6 @@ Demand forecasting helps predict future trends, allowing businesses to make info
 ---
 
 
-
-
-
 # unit 3
 
 ## **Production Function**
@@ -429,8 +426,7 @@ Production functions vary based on the time period under consideration:
 
 ---
 
-
-### **Economies of Scale**  
+## **Economies of Scale**  
 
 Economies of scale refer to the cost advantages that a business can achieve as it increases its scale of production. When a company produces more, the cost per unit of production decreases, making the business more competitive. This concept highlights how size and efficiency lead to cost savings.
 - **Economies of Scale**: Cost advantages realized by companies as production becomes more efficient due to increased scale.
