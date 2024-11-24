@@ -833,7 +833,7 @@ Pricing methods determine how the final price of a product is calculated. They i
 
  - Joint stock companies are organizations owned by shareholders with limited liability. These companies can raise capital by issuing shares, have a separate legal entity, and provide limited liability protection to shareholders.
  -  A company owned jointly by shareholders where ownership is represented by transferabl
-    - **Features**:
+ **Features**:
       - *Separate Legal Entity*: The company has a legal identity separate from its shareholders.
       - *Perpetual Succession*: The company continues regardless of changes in ownership.
       - *Transferable Shares*: Shares can be transferred without affecting company operations.
@@ -844,6 +844,12 @@ Pricing methods determine how the final price of a product is calculated. They i
   1. **Chartered Company**: Established by a royal charter.
   2. **Statutory Company**: Formed under a specific act of parliament.
   3. **Registered Company**: Incorporated under general company laws.
+
+**Example of Joint Stock Company**:
+
+•	Indian Oil Corporation Ltd.
+•	Tata Motors Ltd.
+•	Reliance Industries Ltd.
 
 ---
 ##  **Public Sector Enterprises (PSEs)**:
