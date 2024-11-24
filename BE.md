@@ -268,16 +268,6 @@ Demand elasticity measures the responsiveness of quantity demanded to changes in
 **Definition:**  
 Price Elasticity of Demand (PED) measures how the quantity demanded of a product changes in response to a change in its price. It indicates the sensitivity or responsiveness of consumers to price changes.  
 
-**Formula:**  
-![Screenshot 2024-11-24 181614](https://github.com/user-attachments/assets/38060593-0a60-4ea3-9408-dcc742db05b7)
-
-**Key Insights from the Formula:**  
-- If \( PED > 1 \): Demand is **elastic** (quantity demanded changes significantly with price changes).  
-- If \( PED < 1 \): Demand is **inelastic** (quantity demanded changes minimally with price changes).  
-- If \( PED = 1 \): Demand is **unit elastic** (percentage changes in price and quantity demanded are equal).  
-- If \( PED = 0 \): Demand is **perfectly inelastic** (quantity demanded does not change regardless of price changes).  
-- If \( PED = \infty \): Demand is **perfectly elastic** (any price increase causes quantity demanded to drop to zero).  
-
 **Factors Influencing Price Elasticity of Demand:**  
 1. **Nature of the Product:** Necessities (e.g., food, medicines) are inelastic, while luxuries (e.g., cars, vacations) are elastic.  
 2. **Availability of Substitutes:** Products with close substitutes have higher elasticity.  
@@ -285,7 +275,20 @@ Price Elasticity of Demand (PED) measures how the quantity demanded of a product
 4. **Time Period:** Over time, consumers can find alternatives, making demand more elastic in the long run.  
 5. **Brand Loyalty:** Strong brand preference reduces elasticity.  
 
-**Examples of PED in Real Life:**  
+
+**Formula:**  
+![Screenshot 2024-11-24 181614](https://github.com/user-attachments/assets/38060593-0a60-4ea3-9408-dcc742db05b7)
+
+#### **Types of Goods Based on YED**:
+
+- If \( PED > 1 \): Demand is **elastic** (quantity demanded changes significantly with price changes).  
+- If \( PED < 1 \): Demand is **inelastic** (quantity demanded changes minimally with price changes).  
+- If \( PED = 1 \): Demand is **unit elastic** (percentage changes in price and quantity demanded are equal).  
+- If \( PED = 0 \): Demand is **perfectly inelastic** (quantity demanded does not change regardless of price changes).  
+- If \( PED = \infty \): Demand is **perfectly elastic** (any price increase causes quantity demanded to drop to zero).  
+
+
+**Application**  
 - **Elastic Demand:** A 10% price increase in luxury handbags may reduce quantity demanded by 15%.  
 - **Inelastic Demand:** A 10% increase in the price of gasoline may reduce quantity demanded by only 2%.  
 
@@ -300,6 +303,7 @@ Income Elasticity of Demand (YED) measures how the quantity demanded for a produ
 
 
 #### **Types of Goods Based on YED**:
+
 1. **Normal Goods**:  
    - **YED > 0** (Positive YED): Demand increases as income rises.  
    - Examples: Electronics, clothing, and entertainment.
@@ -312,7 +316,7 @@ Income Elasticity of Demand (YED) measures how the quantity demanded for a produ
    - **YED > 1** (Highly Positive YED): Demand rises disproportionately with income.  
    - Examples: Luxury cars, designer clothing, and vacations.
 
-#### **Real-Life Application**:
+#### **Application**:
 - Firms analyze YED to classify products and predict demand based on economic growth or recession. For instance, during an economic boom, luxury car manufacturers may anticipate higher sales.
 
 
@@ -338,7 +342,7 @@ Cross Elasticity of Demand (XED) measures how the demand for one good changes in
    - **XED = 0**: No relationship exists between the two goods.  
    - Example: Price changes in bread have no effect on the demand for smartphones.
 
-#### **Applications of XED**:
+#### **Applications**:
 - **Pricing Strategies**: Helps businesses adjust prices based on competitors or related goods.  
 - **Market Analysis**: Identifies substitute or complementary goods for market positioning.  
 - **Competitor Impact**: Assists in understanding how changes in rival pricing affect a firm's product demand.
