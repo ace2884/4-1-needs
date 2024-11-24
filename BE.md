@@ -37,7 +37,6 @@ Management has been defined differently by various experts, highlighting its mul
 ### **Scope of Management**
 The scope of management refers to its vast range of responsibilities and activities in an organization.
 
-#### Includes:
 - **Resource Planning:** Ensuring optimal use of material, financial, and human resources.
 - **Operations Management:** Overseeing daily business functions to ensure smooth operations.
 - **Performance Monitoring:** Measuring organizational progress against goals.
