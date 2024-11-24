@@ -833,6 +833,7 @@ Pricing methods determine how the final price of a product is calculated. They i
 
  - Joint stock companies are organizations owned by shareholders with limited liability. These companies can raise capital by issuing shares, have a separate legal entity, and provide limited liability protection to shareholders.
  -  A company owned jointly by shareholders where ownership is represented by transferabl
+
  **Features**:
       - *Separate Legal Entity*: The company has a legal identity separate from its shareholders.
       - *Perpetual Succession*: The company continues regardless of changes in ownership.
