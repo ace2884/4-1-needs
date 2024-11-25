@@ -20,14 +20,16 @@
 ## Parsing Command-Line Arguments: 
 Parsing command-line arguments is a common task in many programs, and Go provides the flag 
 package to make this process straightforward. 
-### 1. **Importing the Required Package:** Begin by importing the flag package.
+### 1. **Importing the Required Package:** 
+Begin by importing the flag package.
 ```   
 import ( 
 "flag" 
 "fmt" 
 )
 ```
-### 2. **Define Flags:** Flags can be of various data types including string, int, bool, etc. 
+### 2. **Define Flags:** 
+Flags can be of various data types including string, int, bool, etc. 
 ```
 var name = flag.String("name", "Guest", "Your name") 
 var age = flag.Int("age", 25, "Your age") 
@@ -37,10 +39,12 @@ The flag.AAA functions (e.g., flag.String, flag.Int) return a pointer to the var
 functions take three arguments.
 The flag name as it will appear on the command line (name in this case). 
 The default value. 
-### 3. **Parse the Flags:** Once the flags have been defined, you can parse the command line into the 
+### 3. **Parse the Flags:**
+Once the flags have been defined, you can parse the command line into the 
 defined flags using the ```flag.Parse()``` method. 
 
-### 4. **Accessing Flag Values:** Since the flag functions return pointers, you must dereference them to 
+### 4. **Accessing Flag Values:**
+Since the flag functions return pointers, you must dereference them to 
 access the underlying value.
 ```
 fmt.Printf("Hello, %s!\n", *name) 
@@ -48,7 +52,8 @@ fmt.Printf("You are %d years old.\n", *age)
 fmt.Printf("Member status: %v\n", *isMember)
 ```
 
-### 5.**Custom Flags:** If you have a custom type you want to use as a flag, you can define your own flag type by 
+### 5.**Custom Flags:** 
+If you have a custom type you want to use as a flag, you can define your own flag type by 
 implementing the flag.Value interface, which requires Set(string) error and String() string 
 methods. 
 
