@@ -53,7 +53,7 @@ implementing the flag.Value interface, which requires Set(string) error and Stri
 methods. 
 
 #### Example:  
-```
+```go
 package main 
 import ( 
 "flag" 
@@ -67,7 +67,10 @@ flag.Parse()
 fmt.Printf("Hello, %s!\n", *name) 
 fmt.Printf("You are %d years old.\n", *age) 
 fmt.Printf("Member status: %v\n", *isMember) 
-} 
+}
+```
+##### cmd
+```
 go run main.go -name=John -age=30 -member=true
 ```
 ##### output:
