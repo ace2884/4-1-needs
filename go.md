@@ -1,3 +1,281 @@
+# unit 3
+
+ ## **function**
+ function is a block of code that performs a specific task. Functions are one of the fundamental building blocks in Go, allowing you to group related operations and reuse code. Here's how you define a function in Go:
+
+###  Syntax
+```go
+func functionName(parameters) returnType {
+    // function body
+}
+```
+
+### Example
+```go
+package main
+
+import "fmt"
+
+// Simple function that takes no parameters and returns no value
+func sayHello() {
+    fmt.Println("Hello, World!")
+}
+
+func main() {
+    sayHello()  // Calling the function
+}
+```
+
+### Types of Functions in Go
+
+1. **Functions with No Parameters and No Return Values**  
+   These functions do not take any input and do not return any result.
+
+   ```go
+   func printMessage() {
+       fmt.Println("This is a message.")
+   }
+   ```
+
+2. **Functions with Parameters and No Return Values**  
+   These functions accept one or more parameters but do not return anything.
+
+   ```go
+   func greet(name string) {
+       fmt.Println("Hello, " + name)
+   }
+   ```
+
+3. **Functions with Return Values**  
+   These functions return a result after performing operations. You specify the return type after the parameter list.
+
+   ```go
+   func add(a int, b int) int {
+       return a + b
+   }
+   ```
+
+4. **Functions with Multiple Return Values**  
+   Go allows a function to return more than one value, which is useful for error handling or returning complex results.
+
+   ```go
+   func divide(a, b int) (int, int) {
+       if b == 0 {
+           return 0, 0 // error case
+       }
+       return a / b, a % b // returns quotient and remainder
+   }
+   ```
+
+5. **Anonymous Functions**  
+   These are functions without a name, often used as arguments to other functions or for quick tasks.
+
+   ```go
+   func() {
+       fmt.Println("This is an anonymous function.")
+   }()
+   ```
+
+  
+
+6. **Methods (associated with types)**  
+   A method is a function that is associated with a specific type (usually a struct). It can operate on that type's fields.
+
+   ```go
+   type Circle struct {
+       Radius float64
+   }
+
+   func (c Circle) area() float64 {
+       return 3.14 * c.Radius * c.Radius
+   }
+   ```
+
+ 7. **Variadic Functions** 
+- A variadic function is a function that accepts a variable number of arguments.  
+- In Golang, it is possible to pass a varying number of arguments of the same type as referenced 
+in the function signature. 
+- To declare a variadic function, the type of the final parameter is preceded by an ellipsis, "...", 
+which shows that the function may be called with any number of arguments of this type.
+- This type of function is useful when you don't know the number of arguments you are passing 
+to the function, the best example is built-in Println function of the fmt package which is a 
+variadic function. 
+- Select single argument from all arguments of variadic function 
+ 
+- A variadic function accepts a variable number of arguments, which are treated as a slice.
+
+   ```go
+   func sum(numbers ...int) int {
+       total := 0
+       for _, num := range numbers {
+           total += num
+       }
+       return total
+   }
+   ```
+
+
+#### Passing multiple string arguments to a variadic function 
+
+- which allows a function to 
+accept a variable number of arguments of the same type. 
+- the function variadicExample() is defined to accept a variadic parameter of 
+type string. This means that it can accept any number of string arguments.  
+- The main() function calls variadicExample() multiple times with different numbers of string 
+arguments. 
+- The first call to variadicExample() is made without any arguments, which is allowed since the 
+function is defined to accept zero or more string arguments. 
+- The second, third, and fourth calls pass different numbers of string arguments to 
+variadicExample(). In each case, the function prints the contents of the s parameter using 
+fmt.Println(). 
+
+```go
+package main 
+import "fmt" 
+func main() {  
+variadicExample() 
+variadicExample("red", "blue") 
+variadicExample("red", "blue", "green") 
+variadicExample("red", "blue", "green", "yellow") 
+} 
+func variadicExample(s ...string) { 
+ fmt.Println(s) 
+}
+```
+Output 
+```
+[] 
+[red blue] 
+[red blue green] 
+[red blue green yellow]
+```
+
+8. **Go Closure** 
+- Go closure is a nested function that allows us to access variables of the outer function even 
+after the outer function is closed. 
+- Nested Functions, Returning a function 
+- **Nested function:** In Go, we can create a function inside another function. This is known as a nested 
+function.  
+
+``` go
+package main 
+import "fmt" 
+// outer function 
+func wish(name string) { 
+// inner function 
+var displayName = func() { 
+fmt.Println("Hi", name) 
+} 
+// call inner function 
+displayName() 
+} 
+func main() { 
+// call outer function 
+wish("Mrudhu")  // Hi Mrudhu 
+}
+```
+In Go, **`defer`**, **`panic`**, and **`recover`** are mechanisms used for controlling the flow of execution, particularly for handling errors and resource cleanup.
+
+## defer , panic ,recover
+
+### 1. `defer`
+
+The **`defer`** statement schedules a function to be executed **after** the surrounding function has completed, regardless of whether it returns normally or through a panic. It is often used for cleanup tasks like closing files, releasing resources, or unlocking mutexes.
+
+- **Key Point**: The deferred function is executed **last-in, first-out (LIFO)** order. That means the last `defer` function will execute first when the surrounding function exits.
+
+#### Example of `defer`:
+
+```go
+package main
+
+import "fmt"
+
+func example() {
+    defer fmt.Println("This is deferred!") // This will execute after example() returns.
+    fmt.Println("Hello, World!")
+}
+
+func main() {
+    example()
+}
+```
+
+**Output:**
+```
+Hello, World!
+This is deferred!
+```
+
+
+### 2. `panic`
+
+**`panic`** is used to stop the normal execution of a function and begin unwinding the stack. When a `panic` occurs, the program stops executing the current function and begins executing any deferred functions in the reverse order they were deferred. If there is no recovery from the panic, the program will terminate.
+
+- **Key Point**: Use `panic` for situations that are irrecoverable, like unexpected errors or conditions that should never happen.
+
+#### Example of `panic`:
+
+```go
+package main
+
+import "fmt"
+
+func causePanic() {
+    panic("Something went wrong!")
+}
+
+func main() {
+    causePanic() // This will panic and terminate the program.
+}
+```
+
+**Output:**
+```
+panic: Something went wrong!
+
+goroutine 1 [running]:
+main.causePanic()
+        /path/to/your/file.go:6 +0x59
+main.main()
+        /path/to/your/file.go:9 +0x20
+```
+
+### 3. `recover`
+
+**`recover`** is used to regain control of a panicking function and prevent the program from terminating. `recover` only works if called inside a deferred function. If the function is panicking, `recover` will capture the panic and return the value passed to `panic()`. If there is no panic, `recover` returns `nil`.
+
+- **Key Point**: `recover` can only be used inside a deferred function.
+
+#### Example of `recover`:
+
+```go
+package main
+
+import "fmt"
+
+func safeCall() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Recovered from panic:", r)
+        }
+    }()
+    panic("Something went wrong!")
+}
+
+func main() {
+    safeCall() // This will panic, but the panic is recovered.
+    fmt.Println("Program continues after recovery.")
+}
+```
+
+**Output:**
+```
+Recovered from panic: Something went wrong!
+Program continues after recovery.
+```
+
+---
 # unit 5
 
 ## comparison of **Concurrency** and **Parallelism**:
