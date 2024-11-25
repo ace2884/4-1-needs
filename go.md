@@ -197,12 +197,13 @@ Member status: true
         fmt.Println(num) } 
         }   
       ```
-   - **Explanation**:In this example, a goroutine is sending data on a channel, and the main goroutine is reading from the same channel. The loop in the main function will continue reading from the channel until it's closed in the sendData function. 
-**Points to remember:** 
-• Always synchronize access to shared memory/resources to prevent race conditions. 
-• Goroutines are cheap, but they are not free. You shouldn't spawn an unbounded number 
+- **Explanation**:In this example, a goroutine is sending data on a channel, and the main goroutine is reading from the same channel. The loop in the main function will continue reading from the channel until it's closed in the sendData function.
+     
+- **Points to remember:** 
+- Always synchronize access to shared memory/resources to prevent race conditions. 
+- Goroutines are cheap, but they are not free. You shouldn't spawn an unbounded number 
 of them. Always be aware of the resources you're utilizing. 
-• Using the sync package and its primitives (sync.WaitGroup, sync.Mutex, etc.) can help 
+- Using the sync package and its primitives (sync.WaitGroup, sync.Mutex, etc.) can help 
 manage and coordinate the execution of goroutines.
 
 ---
