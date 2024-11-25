@@ -1,5 +1,73 @@
 # unit 3
 
+## Structs: 
+- A struct is a composite data type that groups together zero or more values with different data types into a single entity. It is similar to a class in object-oriented programming languages.
+- To define a struct, you use the type keyword followed by the struct's name and a set of fields 
+enclosed in curly braces.
+- **Syntax:** 
+```go
+type Person struct { 
+Name string 
+Age  int 
+}
+```
+- **Initialization:** You can create an instance of a struct using a composite literal and then access its fields. 
+```go
+person := Person{Name: "Mrudhu”, Age: 30}
+fmt.Println(person.Name, person.Age) // Output: Mrudhu 30 
+ ```
+
+### **Methods:**
+-  A struct can have associated methods that operate on its instance. Methods are defined using 
+the function keyword with a receiver argument.
+```
+func (p Person) SayHello() { 
+fmt.Printf("Hello, my name is %s and I'm %d years old.\n", p.Name, p.Age) 
+}
+```
+
+## Interfaces
+- An interface is a collection of method signatures that define a contract. A type implements 
+an interface if it provides definitions for all the methods declared in the interface. 
+- **Syntax:**
+-  To define an interface, you use the type keyword followed by the interface's name and a set of 
+method signatures.
+```
+type Animal interface { 
+    Speak() string 
+    Move() string 
+}
+```
+### **Implementation:** A type implicitly implements an interface if it implements all the methods declared 
+in the interface. There is no explicit "implements" keyword like in some other languages. 
+```go
+type Dog struct{} 
+func (d Dog) Speak() string { 
+    return "Woof!" 
+} 
+func (d Dog) Move() string { 
+    return "Running" 
+} 
+```
+- **Polymorphism:**
+-  Interfaces enable polymorphism, allowing you to create functions that can accept 
+different types as long as they implement the interface. 
+```go
+func Describe(a Animal) { 
+    fmt.Printf("The animal says %s and moves by %s.\n", a.Speak(), a.Move()) 
+} 
+func main() { 
+    dog := Dog{} 
+    cat := Cat{} 
+    Describe(dog) // Output: The animal says Woof! and moves by Running. 
+    Describe(cat) // Output: The animal says Meow! and moves by Jumping. 
+}
+```
+- Structs and interfaces are essential concepts in Go programming, and they provide a foundation for 
+writing clean, modular, and flexible code. Understanding how to define and use structs and interfaces 
+is crucial for building efficient and maintainable Go programs.
+
+
  ## **function**
  function is a block of code that performs a specific task. Functions are one of the fundamental building blocks in Go, allowing you to group related operations and reuse code. Here's how you define a function in Go:
 
