@@ -81,34 +81,6 @@ Member status: true
 ```
 ---
 
-## Positional Arguments: 
-
-The flag package doesn’t handle non-flag arguments by default (i.e., positional arguments). 
-These can be accessed using flag.Args() which returns a slice of strings containing all the non
-flag arguments. 
-
-**Bool Flags:** 
-
-If you want to parse boolean flags, you can use the Bool function: 
-
-```verbose := flag.Bool("verbose", false, "Enable verbose mode.")  ```
-
-Then, the presence of the flag implies true, otherwise, it defaults to false: 
-
-````$ go run main.go -verbose```` 
-
-**Handling Multiple Values:**
-
-If you want a flag that can take multiple values, you can use the flag.Var function with a custom 
-type that implements the flag.Value interface. 
-
-**Error Handling:** 
-
-The flag package provides some default error handling. If a user provides an invalid flag or a flag
-
----
-
-
 
 ## **Concurrency in Go**
 - Go has built-in support for concurrency through goroutines and channels. Concurrency means multiple tasks can run in overlapping time periods, rather than sequentially.
@@ -391,6 +363,7 @@ Here is a clear comparison between **Buffered** and **Unbuffered Channels** in G
      ```
 ---
 
+
 ###  **Mutexes for Data Safety**
    - **Definition**: A `Mutex` (mutual exclusion) is used to ensure only one goroutine can access a critical section of code at a time.
    - **Import Package**: `"sync"`
@@ -465,5 +438,30 @@ Here is a clear comparison between **Buffered** and **Unbuffered Channels** in G
    - **Explanation**: The `WaitGroup` ensures `main` waits for `sayHello` to complete before exiting.
 
 ---
+### Positional Arguments: 
 
+The flag package doesn’t handle non-flag arguments by default (i.e., positional arguments). 
+These can be accessed using flag.Args() which returns a slice of strings containing all the non
+flag arguments. 
+
+**Bool Flags:** 
+
+If you want to parse boolean flags, you can use the Bool function: 
+
+```verbose := flag.Bool("verbose", false, "Enable verbose mode.")  ```
+
+Then, the presence of the flag implies true, otherwise, it defaults to false: 
+
+````$ go run main.go -verbose```` 
+
+**Handling Multiple Values:**
+
+If you want a flag that can take multiple values, you can use the flag.Var function with a custom 
+type that implements the flag.Value interface. 
+
+**Error Handling:** 
+
+The flag package provides some default error handling. If a user provides an invalid flag or a flag
+
+---
 
