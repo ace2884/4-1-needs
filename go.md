@@ -770,19 +770,20 @@ An **array** in Go is a collection of elements of the same type, stored in conti
 ### **Declaring and Initializing Arrays**
 
 #### **1. Declaration**
-```go
-var arrayName [size]dataType
-```
+       ```go
+      var arrayName [size]dataType
+       ```
+ - **At Declaration:**
+     ```go
+     var arrayName = [size]dataType{value1, value2, ..., valueN}
+     ```
 
 #### **2. Initialization**
    - **One by One:**
      ```go
      arrayName[index] = value
      ```
-   - **At Declaration:**
-     ```go
-     var arrayName = [size]dataType{value1, value2, ..., valueN}
-     ```
+
    - **Implicit Size:**
      ```go
      arrayName := [...]dataType{value1, value2, ..., valueN}
