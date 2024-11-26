@@ -39,7 +39,6 @@ func main() {
 ---
 
 ## How Go lang programming is different from c, c++, python, java 
-Here is how Go programming differs from C, C++, Python, and Java, as explained in the provided document:
 
 ### **1. Syntax**
 - **Go:** 
