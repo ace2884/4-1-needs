@@ -1,3 +1,176 @@
+# unit -1
+
+## Key Features of Go:
+
+Go, also known as **Golang**, is a statically typed, compiled programming language designed by Google. It emphasizes simplicity, efficiency, and robust performance, making it well-suited for a variety of use cases like web servers, distributed systems, and command-line tools.
+
+
+1. **Simplicity**: Go has a straightforward syntax and eliminates many complexities found in other languages.
+2. **Concurrency**: Go provides first-class support for concurrent programming through **goroutines** and **channels**.
+3. **Performance**: Being a compiled language, Go programs run close to native speed.
+4. **Garbage Collection**: Go includes automatic memory management, making it easier to avoid memory leaks.
+5. **Standard Library**: It has a rich standard library that covers common tasks like networking, file I/O, and web development.
+6. **Cross-Compilation**: It supports easy cross-compilation for multiple platforms.
+
+### Go's Ecosystem:
+- **Tooling**: Go provides powerful tools like `go build`, `go test`, `go fmt`, and `go mod`.
+- **Package Management**: Modules (introduced in Go 1.11) streamline dependency management.
+- **Community**: Go has a growing community with many open-source libraries and frameworks.
+
+### Code Example
+Here’s a simple Go program:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+### Running the Program
+1. Save the code in a file, e.g., `main.go`.
+2. Open a terminal, navigate to the file's directory, and run:
+   ```bash
+   go run main.go
+   ```
+---
+
+## datatypes in go
+Go has a robust type system, and its data types can be broadly categorized into basic types, composite types, and reference types. Here's a detailed overview:
+
+
+### **1. Basic Data Types**
+These are the fundamental types provided by Go.
+
+#### **a. Boolean**
+- **Type**: `bool`
+- **Values**: `true` or `false`
+- **Example**:
+  ```go
+  var isAvailable bool = true
+  ```
+
+#### **b. Numeric Types**
+##### i. **Integer**
+- **Signed integers**: `int`, `int8`, `int16`, `int32`, `int64`
+- **Unsigned integers**: `uint`, `uint8` (alias for `byte`), `uint16`, `uint32`, `uint64`
+- **Platform-dependent**:
+  - `int` and `uint` depend on the architecture (32-bit or 64-bit).
+
+##### ii. **Floating-point**
+- **Types**: `float32`, `float64`
+- **Example**:
+  ```go
+  var pi float64 = 3.14159
+  ```
+
+##### iii. **Complex Numbers**
+- **Types**: `complex64`, `complex128`
+- **Example**:
+  ```go
+  var z complex128 = complex(3, 4) // 3 + 4i
+  ```
+
+##### iv. **Other Numeric Types**
+- `byte`: Alias for `uint8`.
+- `rune`: Alias for `int32` (represents Unicode code points).
+
+#### **c. String**
+- **Type**: `string`
+- **Description**: A sequence of bytes representing text in UTF-8 encoding.
+- **Immutable**: Strings in Go cannot be modified after creation.
+- **Example**:
+  ```go
+  var greeting string = "Hello, Go!"
+  ```
+
+---
+
+### **2. Composite Data Types**
+These types are built from other types.
+
+#### **a. Array**
+- **Fixed size**: All elements must be of the same type.
+- **Example**:
+  ```go
+  var nums [5]int = [5]int{1, 2, 3, 4, 5}
+  ```
+
+#### **b. Slice**
+- **Dynamic size**: Built on top of arrays, allows resizing.
+- **Example**:
+  ```go
+  var nums []int = []int{1, 2, 3}
+  nums = append(nums, 4) // Adds 4 to the slice
+  ```
+
+#### **c. Map**
+- **Key-value pairs**: Keys and values must be of a single type.
+- **Example**:
+  ```go
+  var person map[string]int = map[string]int{"age": 30, "height": 180}
+  ```
+
+#### **d. Struct**
+- **Custom data types**: Groups fields together.
+- **Example**:
+  ```go
+  type Person struct {
+      Name string
+      Age  int
+  }
+
+  var p = Person{Name: "Alice", Age: 25}
+  ```
+
+---
+
+### **3. Reference Types**
+These types involve references or pointers.
+
+#### **a. Pointer**
+- **Type**: `*T` (pointer to type `T`).
+- **Example**:
+  ```go
+  var x int = 10
+  var p *int = &x // Pointer to x
+  ```
+
+#### **b. Function**
+- Functions are first-class citizens in Go.
+- **Example**:
+  ```go
+  func add(a int, b int) int {
+      return a + b
+  }
+  ```
+
+---
+
+### **4. Interface**
+- **Type**: `interface{}`
+- **Description**: Defines a set of methods that a type must implement.
+- **Example**:
+  ```go
+  type Shape interface {
+      Area() float64
+  }
+  ```
+
+---
+
+### **5. Special Types**
+#### **a. nil**
+- Represents an uninitialized value for reference types (e.g., pointers, maps, slices, etc.).
+- **Example**:
+  ```go
+  var p *int = nil
+  ```
+
+---
 
 
 # unit 3
