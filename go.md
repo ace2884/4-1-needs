@@ -172,6 +172,475 @@ These types involve references or pointers.
 
 ---
 
+# unit 2
+
+## **Variables in Go**
+
+A **variable** in Go is a storage container for data that can be used and modified during a program's execution.
+
+#### **Naming Conventions**
+- Must start with a letter; additional characters can be letters or numbers.
+- Cannot begin with a number or underscore.
+- No spaces in names.
+- Use camel case for readability, e.g., `empName`.
+- Case-sensitive (e.g., `car`, `Car`, and `CAR` are different).
+- Cannot use reserved words as variable names.
+- Variables starting with a lowercase letter are package-private (unexported), while those starting with an uppercase letter are accessible outside the package (exported).
+
+
+### **Variable Declaration**
+1. **Using `var` Keyword**
+   ```go
+   var num int = 10
+   var name string = "Alice"
+   ```
+   
+2. **Without Initialization**
+   ```go
+   var num int // Defaults to 0
+   var name string // Defaults to ""
+   ```
+   
+3. **With Type Inference**
+   ```go
+   var age = 25 // Type inferred as int
+   var city = "New York" // Type inferred as string
+   ```
+
+4. **Short Variable Declaration**
+   - Commonly used inside functions.
+   - Syntax:
+     ```go
+     age := 30
+     name := "Bob"
+     ```
+   - No need for `var` or explicit types.
+
+5. **Multiple Variables**
+   - Same type:
+     ```go
+     var a, b, c int = 1, 2, 3
+     ```
+   - Different types:
+     ```go
+     var (
+         name string = "Alice"
+         age  int    = 25
+         isActive bool = true
+     )
+     ```
+
+---
+
+## **Scope of Variables**
+
+The **scope** of a variable in Go refers to the section of code where the variable is accessible.
+
+#### **1. Local Variables**
+- Declared inside a function or block.
+- Accessible only within that function or block.
+- Lifetime ends when the function or block execution finishes.
+
+   **Example:**
+   ```go
+   func main() {
+       var localVar = "I'm local!"
+       fmt.Println(localVar) // Accessible here
+   }
+   // localVar is not accessible here
+   ```
+
+#### **2. Global Variables**
+- Declared outside any function, usually at the top of the file.
+- Accessible by all functions in the same package.
+
+   **Example:**
+   ```go
+   var globalVar = "I'm global!"
+
+   func main() {
+       fmt.Println(globalVar) // Accessible here
+   }
+
+   func anotherFunc() {
+       fmt.Println(globalVar) // Accessible here too
+   }
+   ```
+
+#### **3. Package-Level Variables**
+- Declared at the package level.
+- Accessible throughout the package, but exported variables (starting with uppercase) are accessible outside the package.
+
+---
+
+## **Constants in Go**
+
+- A **constant** in Go is a value that cannot be changed once it is assigned. Constants are evaluated at compile time and provide reliability in code by ensuring immutability.
+- Constants ensure immutability and clarity in Go programs, making code easier to debug and maintain.
+
+#### **Key Features of Constants**
+- Declared using the `const` keyword.
+- Can store values of primitive data types such as **boolean**, **numeric**, or **string**.
+- Immutable (cannot be modified once assigned).
+- Improves readability and prevents accidental modification of critical values.
+
+
+### **Declaration Syntax**
+
+1. **Typed Constants**
+   - Type is explicitly declared.
+   - Example:
+     ```go
+     const LENGTH int = 10
+     const PI float64 = 3.14159
+     ```
+-  Specific type ensures type safety.
+  - Example:
+    ```go
+    const LENGTH int = 10
+    fmt.Printf("Length: %d\n", LENGTH)
+    ```
+
+2. **Untyped Constants**
+   - No explicit type; type is inferred when used.
+   - Example:
+     ```go
+     const GREETING = "Hello, Go!"
+     const PI = 3.14159
+     ```
+
+  - Flexible in usage and can adapt their type based on the context.
+  - Example:
+    ```go
+    const COUNT = 10
+    var x float64 = COUNT * 1.5
+    fmt.Printf("Result: %.2f\n", x)
+    ```
+     
+
+**Typed and Untyped Constants**
+   - Example
+   ```go
+   const val1 = 10
+   const val2 int = 20
+
+   fmt.Println("Value of val1:", val1)
+   fmt.Println("Value of val2:", val2)
+   ```
+
+
+### **Types of Constants in Go**
+
+#### **1. Numeric Constants**
+   - Numeric constants can be of different types such as **integer**, **floating-point**, and **complex** numbers.
+   
+   **Example:**
+   ```go
+   package main
+   import "fmt"
+   func main() {
+       const val1 = 10              // Untyped integer
+       const val2 float64 = 10.23   // Typed floating-point
+       const complexNum = 1 + 2i    // Untyped complex number
+
+       fmt.Printf("val1: %d\n", val1)
+       fmt.Printf("val2: %.2f\n", val2)
+       fmt.Printf("Complex number: %v\n", complexNum)
+   }
+   ```
+
+#### **2. String Literals**
+   - String constants are enclosed in double quotes (`"`).
+   - Example:
+     ```go
+     const message = "Welcome to Go programming"
+     fmt.Println(message)
+     ```
+
+#### **3. Boolean Constants**
+   - Can only be `true` or `false`.
+   - Example:
+     ```go
+     const isLearning bool = true
+     fmt.Printf("Learning Go: %v\n", isLearning)
+     ```
+**String and Boolean Constants Example**
+   
+  ```go
+   const myString = "Hello, World!"
+   const myBool bool = true
+
+   fmt.Printf("String constant: %s\n", myString)
+   fmt.Printf("Boolean constant: %v\n", myBool)
+   ```
+
+---
+
+## **Control Structures in Go**
+
+Control structures are used to control the flow of execution in a Go program. They help in making decisions, repeating certain actions, and choosing between different alternatives. Go provides several control structures, including `if`, `if-else`, `if-else-if`, `nested if`, `for` loop, and `switch-case`. 
+
+- These control structures are fundamental for programming in Go, allowing for flexible and efficient code execution.
+
+
+### **1. If Statement**
+
+The `if` statement is used to execute a block of code if a specified condition is true.
+- **If**: Checks a single condition and executes a block of code if the condition is true.
+
+#### **Syntax:**
+```go
+if condition {
+    // code to be executed if condition is true
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Evaluate Condition]
+            |
+            |----> [True] --> [Execute Code]
+            |
+            |----> [False] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    x := 10
+    if x > 5 {
+        fmt.Println("x is greater than 5")
+    }
+}
+```
+
+---
+
+### **2. If-Else Statement**
+
+The `if-else` statement allows the program to choose between two blocks of code: one that runs if the condition is true, and another that runs if it is false.
+- **If-Else**: Executes one block if the condition is true, another if it is false.
+
+
+#### **Syntax:**
+```go
+if condition {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Evaluate Condition]
+            |
+            |----> [True] --> [Execute True Block] --> [End]
+            |
+            |----> [False] --> [Execute False Block] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    x := 3
+    if x > 5 {
+        fmt.Println("x is greater than 5")
+    } else {
+        fmt.Println("x is less than or equal to 5")
+    }
+}
+```
+
+---
+
+### **3. If-Else-If Statement**
+
+The `if-else-if` statement is used when there are multiple conditions to check, and different code blocks should execute for different conditions.
+- **If-Else-If**: Checks multiple conditions and executes corresponding blocks.
+
+
+#### **Syntax:**
+```go
+if condition1 {
+    // code to be executed if condition1 is true
+} else if condition2 {
+    // code to be executed if condition2 is true
+} else {
+    // code to be executed if no conditions are true
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Evaluate Condition1]
+            |
+            |----> [True] --> [Execute Block 1] --> [End]
+            |
+            |----> [False] --> [Evaluate Condition2]
+                             |
+                             |----> [True] --> [Execute Block 2] --> [End]
+                             |
+                             |----> [False] --> [Execute Else Block] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    x := 6
+    if x > 10 {
+        fmt.Println("x is greater than 10")
+    } else if x > 5 {
+        fmt.Println("x is greater than 5 but less than or equal to 10")
+    } else {
+        fmt.Println("x is less than or equal to 5")
+    }
+}
+```
+
+---
+
+### **4. Nested If Statement**
+
+A **nested if** is an `if` statement inside another `if` or `else` block. It allows for more complex decision-making.
+- **Nested If**: Allows for more complex decision-making with nested conditions.
+
+#### **Syntax:**
+```go
+if condition1 {
+    if condition2 {
+        // code to be executed if condition1 and condition2 are true
+    }
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Evaluate Condition1]
+            |
+            |----> [True] --> [Evaluate Condition2]
+                             |
+                             |----> [True] --> [Execute Code] --> [End]
+                             |
+                             |----> [False] --> [End]
+            |
+            |----> [False] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    x := 10
+    if x > 5 {
+        if x < 15 {
+            fmt.Println("x is between 5 and 15")
+        }
+    }
+}
+```
+
+---
+
+### **5. For Loop**
+
+Go only has one loop construct: the `for` loop. It is used to repeat a block of code multiple times.
+- **For Loop**: Repeats a block of code multiple times based on a condition.
+
+
+#### **Syntax:**
+```go
+for initialization; condition; increment {
+    // code to be executed repeatedly
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Initialize] --> [Evaluate Condition]
+            |
+            |----> [True] --> [Execute Loop] --> [Increment] --> [Evaluate Condition]
+            |
+            |----> [False] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    for i := 1; i <= 5; i++ {
+        fmt.Println(i)
+    }
+}
+```
+
+---
+
+### **6. Switch-Case Statement**
+
+The `switch` statement is used for multiple conditions that are evaluated and checked in sequence. It is an alternative to a series of `if-else` statements.
+- **Switch-Case**: A multi-way branch statement that compares an expression with multiple cases.
+
+
+#### **Syntax:**
+```go
+switch expression {
+case value1:
+    // code to execute if expression == value1
+case value2:
+    // code to execute if expression == value2
+default:
+    // code to execute if expression doesn't match any case
+}
+```
+
+#### **Flowchart**:
+```
+[Start] --> [Evaluate Expression]
+            |
+            |----> [Match Case 1] --> [Execute Case 1 Block] --> [End]
+            |
+            |----> [Match Case 2] --> [Execute Case 2 Block] --> [End]
+            |
+            |----> [No Match] --> [Execute Default Block] --> [End]
+```
+
+#### **Example**:
+```go
+package main
+import "fmt"
+
+func main() {
+    day := 3
+    switch day {
+    case 1:
+        fmt.Println("Sunday")
+    case 2:
+        fmt.Println("Monday")
+    case 3:
+        fmt.Println("Tuesday")
+    case 4:
+        fmt.Println("Wednesday")
+    default:
+        fmt.Println("Invalid day")
+    }
+}
+```
+
+---
 
 # unit 3
 
