@@ -678,7 +678,7 @@ An **array** in Go is a collection of elements of the same type, stored in conti
 
 ### **Declaring and Initializing Arrays**
 
-#### **1. Declaration**
+- **1. Declaration**
 ```go
       var arrayName [size]dataType
 ```
@@ -687,7 +687,7 @@ An **array** in Go is a collection of elements of the same type, stored in conti
      var arrayName = [size]dataType{value1, value2, ..., valueN}
      ```
 
-#### **2. Initialization**
+- **2. Initialization**
    
 ```go
      arrayName[index] = value
@@ -716,7 +716,7 @@ func main() {
 }
 ```
 
-#### **Accessing Array Elements**
+### **Accessing Array Elements**
 - Array elements can be accessed using their index.
 - Accessing elements involves specifying the index or indices.
   
@@ -794,8 +794,6 @@ func main() {
 }
 
 ```
-
-
 ---
 
 ### **Slices in Go**
