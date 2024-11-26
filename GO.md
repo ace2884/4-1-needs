@@ -1,3 +1,86 @@
+
+
+### **2. Composite Data Types**
+These types are built from other types.
+
+#### **a. Array**
+- **Fixed size**: All elements must be of the same type.
+- **Example**:
+  ```go
+  var nums [5]int = [5]int{1, 2, 3, 4, 5}
+  ```
+
+#### **b. Slice**
+- **Dynamic size**: Built on top of arrays, allows resizing.
+- **Example**:
+  ```go
+  var nums []int = []int{1, 2, 3}
+  nums = append(nums, 4) // Adds 4 to the slice
+  ```
+
+#### **c. Map**
+- **Key-value pairs**: Keys and values must be of a single type.
+- **Example**:
+  ```go
+  var person map[string]int = map[string]int{"age": 30, "height": 180}
+  ```
+
+#### **d. Struct**
+- **Custom data types**: Groups fields together.
+- **Example**:
+  ```go
+  type Person struct {
+      Name string
+      Age  int
+  }
+
+  var p = Person{Name: "Alice", Age: 25}
+  ```
+
+---
+
+### **3. Reference Types**
+These types involve references or pointers.
+
+#### **a. Pointer**
+- **Type**: `*T` (pointer to type `T`).
+- **Example**:
+  ```go
+  var x int = 10
+  var p *int = &x // Pointer to x
+  ```
+
+#### **b. Function**
+- Functions are first-class citizens in Go.
+- **Example**:
+  ```go
+  func add(a int, b int) int {
+      return a + b
+  }
+  ```
+
+---
+
+### **4. Interface**
+- **Type**: `interface{}`
+- **Description**: Defines a set of methods that a type must implement.
+- **Example**:
+  ```go
+  type Shape interface {
+      Area() float64
+  }
+  ```
+
+---
+
+### **5. Special Types**
+#### **a. nil**
+- Represents an uninitialized value for reference types (e.g., pointers, maps, slices, etc.).
+- **Example**:
+  ```go
+  var p *int = nil
+  ```
+
 # UNIT 3
 
 
