@@ -308,7 +308,7 @@ The **scope** of a variable in Go refers to the section of code where the variab
 - A **constant** in Go is a value that cannot be changed once it is assigned. Constants are evaluated at compile time and provide reliability in code by ensuring immutability.
 - Constants ensure immutability and clarity in Go programs, making code easier to debug and maintain.
 
-#### **Key Features of Constants**
+### **Key Features of Constants**
 - Declared using the `const` keyword.
 - Can store values of primitive data types such as **boolean**, **numeric**, or **string**.
 - Immutable (cannot be modified once assigned).
@@ -318,30 +318,24 @@ The **scope** of a variable in Go refers to the section of code where the variab
 ### **Declaration Syntax**
 
 1. **Typed Constants**
-   - Type is explicitly declared.
-   - Example:
-     ```go
-     const LENGTH int = 10
-     const PI float64 = 3.14159
-     ```
--  Specific type ensures type safety.
+  - Type is explicitly declared.
+  -  Specific type ensures type safety.
   - Example:
     ```go
+    const LENGTH int = 10
+    const PI float64 = 3.14159
     const LENGTH int = 10
     fmt.Printf("Length: %d\n", LENGTH)
     ```
 
 2. **Untyped Constants**
-   - No explicit type; type is inferred when used.
-   - Example:
-     ```go
-     const GREETING = "Hello, Go!"
-     const PI = 3.14159
-     ```
-
+  - No explicit type; type is inferred when used.
   - Flexible in usage and can adapt their type based on the context.
   - Example:
     ```go
+    const GREETING = "Hello, Go!"
+    const PI = 3.14159
+    
     const COUNT = 10
     var x float64 = COUNT * 1.5
     fmt.Printf("Result: %.2f\n", x)
@@ -394,16 +388,6 @@ The **scope** of a variable in Go refers to the section of code where the variab
      const isLearning bool = true
      fmt.Printf("Learning Go: %v\n", isLearning)
      ```
-**String and Boolean Constants Example**
-   
-  ```go
-   const myString = "Hello, World!"
-   const myBool bool = true
-
-   fmt.Printf("String constant: %s\n", myString)
-   fmt.Printf("Boolean constant: %v\n", myBool)
-   ```
-
 ---
 
 ## **Control Structures in Go**
@@ -412,13 +396,12 @@ Control structures are used to control the flow of execution in a Go program. Th
 
 - These control structures are fundamental for programming in Go, allowing for flexible and efficient code execution.
 
-
 ### **1. If Statement**
 
 The `if` statement is used to execute a block of code if a specified condition is true.
 - **If**: Checks a single condition and executes a block of code if the condition is true.
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 if condition {
     // code to be executed if condition is true
@@ -426,7 +409,7 @@ if condition {
 ```
 
 
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -447,7 +430,7 @@ The `if-else` statement allows the program to choose between two blocks of code:
 - **If-Else**: Executes one block if the condition is true, another if it is false.
 
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 if condition {
     // code to be executed if condition is true
@@ -456,7 +439,7 @@ if condition {
 }
 ```
 
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -479,7 +462,7 @@ The `if-else-if` statement is used when there are multiple conditions to check, 
 - **If-Else-If**: Checks multiple conditions and executes corresponding blocks.
 
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 if condition1 {
     // code to be executed if condition1 is true
@@ -491,7 +474,7 @@ if condition1 {
 ```
 
 
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -515,7 +498,7 @@ func main() {
 A **nested if** is an `if` statement inside another `if` or `else` block. It allows for more complex decision-making.
 - **Nested If**: Allows for more complex decision-making with nested conditions.
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 if condition1 {
     if condition2 {
@@ -525,7 +508,7 @@ if condition1 {
 ```
 
 
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -548,14 +531,14 @@ Go only has one loop construct: the `for` loop. It is used to repeat a block of 
 - **For Loop**: Repeats a block of code multiple times based on a condition.
 
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 for initialization; condition; increment {
     // code to be executed repeatedly
 }
 ```
 
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -575,7 +558,7 @@ The `switch` statement is used for multiple conditions that are evaluated and ch
 - **Switch-Case**: A multi-way branch statement that compares an expression with multiple cases.
 
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 switch expression {
 case value1:
@@ -587,9 +570,7 @@ default:
 }
 ```
 
-
-
-#### **Example**:
+- **Example**:
 ```go
 package main
 import "fmt"
@@ -767,20 +748,20 @@ A **slice** in Go is a dynamic, flexible, and more powerful data structure than 
 
 ### **Defining a Slice**
   
-#### **1. From an Array**
+#### **From an Array**
 A slice can be created by referencing a portion of an array.
 ```go
 var array = [5]int{1, 2, 3, 4, 5}
 var slice = array[1:4] // Creates a slice [2, 3, 4]
 ```
 
-#### **2. Using `make()`**
+#### **Using `make()`**
 The `make()` function is used to create a slice with a specified length and capacity.
 ```go
 slice := make([]int, 5, 10) // Slice with length 5 and capacity 10
 ```
 
-#### **3. Using Slice Literal**
+#### **Using Slice Literal**
 Similar to an array literal but without specifying the size.
 ```go
 slice := []int{1, 2, 3, 4, 5}
@@ -791,12 +772,12 @@ slice := []int{1, 2, 3, 4, 5}
 
 The `append()` function adds one or more elements to the end of a slice. If the slice’s capacity is exceeded, a new underlying array is allocated.
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 slice = append(slice, values...)
 ```
 
-#### **Example:**
+- **Example:**
 ```go
 package main
 import "fmt"
@@ -815,18 +796,18 @@ func main() {
 }
 ```
 
----
+
 
 ### **Copying Slices**
 
 The `copy()` function is used to copy elements from one slice to another. The number of elements copied is the minimum of the lengths of the source and destination slices.
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 copy(destSlice, srcSlice)
 ```
 
-#### **Example:**
+- **Example:**
 ```go
 package main
 import "fmt"
@@ -842,15 +823,14 @@ func main() {
 }
 ```
 
----
+
 
 ### **Slice Properties**
 
 #### **Getting Length and Capacity**
 - **`len(slice)`**: Returns the current length of the slice.
 - **`cap(slice)`**: Returns the total capacity of the slice.
-
-#### **Example:**
+- **Example:**
 ```go
 package main
 import "fmt"
@@ -861,8 +841,6 @@ func main() {
     fmt.Println("Capacity:", cap(slice)) // 5
 }
 ```
-
----
 
 ### **Example Program Using Slices**
 ```go
@@ -900,7 +878,7 @@ A **map** in Go is a built-in data type that associates **keys** to **values**. 
 
 ### **Defining a Map**
 
-#### **Syntax:**
+- **Syntax:**
 ```go
 var mapName map[keyType]valueType
 ```
@@ -923,7 +901,7 @@ var mapName map[keyType]valueType
 ### **Basic Map Operations**
 
 #### **1. Insert or Update**
-- Assign values to keys using `mapName[key] = value`.
+
 - To insert a key-value pair into a map or update an existing key:
 ```go
 mapName[key] = value
@@ -979,11 +957,6 @@ func main() {
 ```
 
 ---
-
-
-
-
-
 
 
 # unit 3
