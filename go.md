@@ -506,14 +506,6 @@ if condition {
 }
 ```
 
-#### **Flowchart**:
-```
-[Start] --> [Evaluate Condition]
-            |
-            |----> [True] --> [Execute Code]
-            |
-            |----> [False] --> [End]
-```
 
 #### **Example**:
 ```go
@@ -543,15 +535,6 @@ if condition {
 } else {
     // code to be executed if condition is false
 }
-```
-
-#### **Flowchart**:
-```
-[Start] --> [Evaluate Condition]
-            |
-            |----> [True] --> [Execute True Block] --> [End]
-            |
-            |----> [False] --> [Execute False Block] --> [End]
 ```
 
 #### **Example**:
@@ -588,18 +571,6 @@ if condition1 {
 }
 ```
 
-#### **Flowchart**:
-```
-[Start] --> [Evaluate Condition1]
-            |
-            |----> [True] --> [Execute Block 1] --> [End]
-            |
-            |----> [False] --> [Evaluate Condition2]
-                             |
-                             |----> [True] --> [Execute Block 2] --> [End]
-                             |
-                             |----> [False] --> [Execute Else Block] --> [End]
-```
 
 #### **Example**:
 ```go
@@ -634,18 +605,6 @@ if condition1 {
 }
 ```
 
-#### **Flowchart**:
-```
-[Start] --> [Evaluate Condition1]
-            |
-            |----> [True] --> [Evaluate Condition2]
-                             |
-                             |----> [True] --> [Execute Code] --> [End]
-                             |
-                             |----> [False] --> [End]
-            |
-            |----> [False] --> [End]
-```
 
 #### **Example**:
 ```go
@@ -675,15 +634,6 @@ Go only has one loop construct: the `for` loop. It is used to repeat a block of 
 for initialization; condition; increment {
     // code to be executed repeatedly
 }
-```
-
-#### **Flowchart**:
-```
-[Start] --> [Initialize] --> [Evaluate Condition]
-            |
-            |----> [True] --> [Execute Loop] --> [Increment] --> [Evaluate Condition]
-            |
-            |----> [False] --> [End]
 ```
 
 #### **Example**:
@@ -718,16 +668,7 @@ default:
 }
 ```
 
-#### **Flowchart**:
-```
-[Start] --> [Evaluate Expression]
-            |
-            |----> [Match Case 1] --> [Execute Case 1 Block] --> [End]
-            |
-            |----> [Match Case 2] --> [Execute Case 2 Block] --> [End]
-            |
-            |----> [No Match] --> [Execute Default Block] --> [End]
-```
+
 
 #### **Example**:
 ```go
@@ -780,9 +721,9 @@ An **array** in Go is a collection of elements of the same type, stored in conti
 
 #### **2. Initialization**
    
-     ```go
+```go
      arrayName[index] = value
-     ```
+```
 
    - **Implicit Size:**
      ```go
