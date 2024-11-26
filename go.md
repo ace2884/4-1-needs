@@ -1337,7 +1337,7 @@ Member status: true
 
 ### **Channels**
    -  Channels provide a way for goroutines to communicate and synchronize by passing data. They are a crucial feature in Go for sharing information safely between goroutines.
-    - **Syntax**:
+  - **Syntax**:
    - **Creating a Channel**:
      ```go
      ch := make(chan dataType)
@@ -1445,22 +1445,6 @@ manage and coordinate the execution of goroutines.
 | **Efficiency**             | More efficient when frequent data bursts occur.       | Simpler and more efficient when immediate processing is required. |
 | **Typical Applications**   | Queuing tasks, managing a pool of resources.          | Synchronizing goroutines or handshaking processes.    |
 | **Handling Data**          | Can handle multiple values in the buffer without blocking until full. | Can handle only one value at a time, requiring both sender and receiver to be ready. |
-
-  - **Example**:
-     ```go
-     package main
-     import "fmt"
-
-     func main() {
-         ch := make(chan int, 2)  // Buffered channel
-
-         ch <- 1  // Send data into the channel
-         ch <- 2
-
-         fmt.Println(<-ch)  // Receive data from the channel
-         fmt.Println(<-ch)
-     }
-     ```
 
 ---
 
