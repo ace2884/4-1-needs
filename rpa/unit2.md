@@ -18,13 +18,6 @@ Setting up the proper environment for RPA implementation is crucial for success.
 *   **Application Server Versions**:  Verify that the versions of applications used in development and testing match the versions on the production servers. Discrepancies in versions can lead to unexpected behavior.
 *   **Active Directory (AD) Groups**:  Organize access requests using AD groups whenever possible. Create separate groups for different user roles and grant access accordingly. This simplifies access management and improves security.
 
-**Best Practices**
-
-*   **Early Start** 
-*   **Distinct Environments**
-*   **Naming Conventions**
-*   **Production Mirroring**
-
 
 ## Infrastructure Types for RPA Implementation
 
