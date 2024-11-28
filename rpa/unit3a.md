@@ -226,7 +226,7 @@ Once the data is gathered, RPA bots can process it to make it more useful. This 
 *   **Data Formatting**:  Adjusting the presentation of data for consistency, readability, or to meet specific requirements.
 
 
-**Practical Use Cases**
+## **Practical Use Cases**
 
 Let's consider some examples of how RPA uses data manipulation for gathering and assembling data:
 
