@@ -1,5 +1,5 @@
 
-### **Automation Scenarios of Attended and Unattended Robots**
+## **Automation Scenarios of Attended and Unattended Robots**
 
 * **Attended robots** are software robots that work alongside human employees and assist them with their tasks in real-time. 
 
@@ -15,12 +15,12 @@
     * Unattended robots are used for tasks like **invoice processing, data migration, server maintenance, and batch data processing** that do not require human intervention. 
     * Unattended robots are suitable for automating **high-volume, repetitive tasks** that do not require human judgment or real-time decision-making.
 
-### **Bot Models**
+## **Bot Models**
 
 * **Task Bots:** These are the most basic RPA bot models that automate individual, repetitive tasks according to a set of predefined rules and instructions.
 * **Process Bots:** These are more advanced than task bots and automate entire end-to-end processes, handling a series of tasks, decisions, and interactions across multiple systems.
-* **Attended Bots:**  [Discussed in detail above]. 
-* **Unattended Bots:**  [Discussed in detail above]. 
+* **Attended Bots:** are software robots that work alongside human employees and assist them with their tasks in real-time. Attended robots are typically **triggered by a user** and operate on the user's workstation. 
+* **Unattended Bots:** are software robots that operate independently without human intervention.Unattended robots are typically **scheduled to run** at specific times or in response to certain events.  
 * **Hybrid Bots:** These combine attended and unattended capabilities, allowing them to collaborate with humans when necessary and operate autonomously when needed.
 * **Cognitive Bots:** These bots use artificial intelligence (AI) and machine learning (ML) capabilities to perform tasks involving natural language processing, sentiment analysis, image recognition, and decision-making.
 * **Meta Bots:** These are reusable automation components that can be deployed across multiple processes and projects, promoting consistency and reducing development time.
@@ -33,7 +33,8 @@
 * **Integration Bots:** Focused on automating data transfer and communication between different applications and systems.
 * **Analytics Bots:** Designed to automate data analysis and reporting tasks, generating reports, dashboards, and insights.
 
-### **Creating a Provision Robot from Server**
+
+## **Creating a Provision Robot from Server**
 
 Provisioning a robot from a server in an RPA environment typically involves setting up a new robot instance on a designated machine or virtual machine (VM) to execute automation tasks. Here are the general steps:
 
@@ -48,7 +49,8 @@ Provisioning a robot from a server in an RPA environment typically involves sett
 9.  **Set Up Monitoring and Logging:** Implement monitoring and logging mechanisms to track the robot’s performance. Set up error handling and alerts for unexpected issues.
 10.  **Start the Robot:** Initiate automation tasks through the orchestrator or schedule- or event-based triggers. 
 
-### **Connecting a Robot to a Server**
+
+## **Connecting a Robot to a Server**
 
 Connecting a robot to an RPA server, also called an orchestrator or control center, is essential for setting up and managing automation tasks. Here's how:
 
@@ -63,11 +65,10 @@ Connecting a robot to an RPA server, also called an orchestrator or control cent
 9.  **Connectivity Testing:** Before using the robot, test the connection to ensure it can communicate with the server and receive instructions.
 10.  **Start the Robot:** Initiate tasks through the orchestrator manually or using predefined schedules.
 
-### **Deploying the Robot to Server**
+
+## **Deploying the Robot to Server**
 
 While the sources provide information on publishing an automation solution using a publish utility and mention deploying robots, they lack specific details on deploying a robot to a server. 
-
-Please note that the information in the following list is not from the sources and you may want to verify it independently.
 
 Here are some general steps involved in deploying a robot to a server:
 
@@ -78,4 +79,3 @@ Here are some general steps involved in deploying a robot to a server:
 5.  **Test and Validate:** Conduct thorough testing to ensure the robot functions correctly in the server environment.
 6.  **Monitor and Maintain:** Monitor the robot's performance and implement necessary maintenance tasks, including updates and security patches. 
 
-Please note that the exact deployment process may vary depending on the specific RPA platform and server environment used. Referring to the documentation and guidance provided by your chosen RPA platform is recommended for detailed instructions. 
