@@ -54,15 +54,6 @@ Environment configuration and management in Orchestrator are vital for structuri
 *   Maintain and optimize environments by removing robots or processes no longer needed, and ensure alignment with current structures and projects.
 
 
-## Features and Key Advantages of UiPath Orchestrator
-
-*   **Provisioning:** Creates and maintains the connection between Robots and the web application.
-*   **Deployment:** Ensures the correct delivery of package versions to the assigned Robots for execution.
-*   **Configuration:** Maintains and delivers Robot environments and processes configuration.
-*   **Queues:** Ensures automatic workload distribution across Robots.
-*   **Monitoring:** Keeps track of Robot identification data and maintains user permissions.
-*   **Logging:** Stores and indexes logs in a database.
-*   **Inter-connectivity:** Acts as a centralized communication point for third-party solutions or applications.
 
 **Key Advantages:**
 
