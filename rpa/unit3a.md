@@ -143,7 +143,7 @@ Maintaining an RPA project is vital for its long-term success. It involves adapt
 
 
 
-### Collections and Tables
+## Collections and Tables
 
 Collections and tables allow you to manage and process more complex data structures in RPA. 
 
