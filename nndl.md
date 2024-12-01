@@ -1,3 +1,122 @@
+
+## Artificial Neural Networks (ANNs)
+
+An **Artificial Neural Network (ANN)** is a model inspired by how the human brain works. It is made up of connected units called **artificial neurons**, which act like the brain's neurons. These neurons are connected by **edges**, similar to synapses in the brain. Each neuron receives inputs, processes them, and sends outputs to other neurons. 
+
+The key components of ANNs include:
+1. **Neurons**: Process inputs and produce outputs using a mathematical formula.
+2. **Edges**: Represent the connections between neurons, each with a weight that determines the strength of the signal.
+3. **Activation Function**: A non-linear formula that decides the output of each neuron based on its inputs.
+
+### Structure of a Neural Network
+- Neurons are grouped into **layers**:
+  1. **Input Layer**: Receives data (e.g., images or numbers).
+  2. **Hidden Layers**: Process the data through transformations.
+  3. **Output Layer**: Produces the final result (e.g., predictions or classifications).
+- A neural network with **two or more hidden layers** is called a **deep neural network (DNN)**.
+![image](https://github.com/user-attachments/assets/7bae6cec-46a4-4990-8463-a87de167723a)
+
+### How ANNs Learn
+ANNs learn by adjusting the **weights** of the connections between neurons. This adjustment happens using a process called a **learning algorithm**, which helps the network improve its performance over time. The learning process involves:
+1. Taking inputs from the environment.
+2. Using the connections (with weights) to store knowledge.
+3. Updating weights based on feedback to achieve better results.
+
+### Why ANNs Are Powerful
+- ANNs are excellent at tasks like **pattern recognition** and **decision-making** because they mimic how the brain processes information.
+- For example, the human brain can recognize a familiar face in less than 200 milliseconds, something that traditional computers struggle to achieve as quickly.
+- ANNs use their interconnected structure to learn from data and adapt over time.
+
+
+## Network Architectures in Neural Networks
+
+The architecture of a neural network defines how the neurons (nodes) are structured and interconnected, influencing the network's learning algorithm and capabilities. The three primary network architectures are **Single-Layer Feedforward Networks**, **Multilayer Feedforward Networks**, and **Recurrent Networks**. Below is a detailed explanation of each architecture:
+
+---
+
+### **1. Single-Layer Feedforward Networks**
+
+  - In a single-layer feedforward network, the neurons are organized into two layers:
+    - An **input layer** of source nodes.
+    - An **output layer** of computation nodes (neurons).
+
+- **Characteristics**:
+  - Information flows only in the forward direction from input nodes to output nodes.
+  - No feedback connections exist.
+  - Each input node connects directly to each output node.
+
+- **Example**:
+  - Figure 13 illustrates a single-layer feedforward network where there are four input nodes and four output nodes. 
+  - This type of network is simple and suitable for problems like linear classification or regression tasks.
+
+- **Advantages**:
+  - Easy to implement and train.
+  - Requires less computational power.
+
+- **Limitations**:
+  - Cannot model complex relationships or extract higher-order features due to the absence of hidden layers.
+![image](https://github.com/user-attachments/assets/bfe345fa-083e-4a7c-98bd-3d5e1b9bc942)
+
+---
+
+### **2. Multilayer Feedforward Networks**
+
+  - This architecture includes one or more **hidden layers** between the input and output layers. 
+  - Each hidden layer comprises neurons that compute intermediate representations of the input data.
+-  **Variants of Multilayer Feedforward Networks**:
+      -  1. **Fully Connected**: Every neuron in a layer is connected to all neurons in the adjacent layers.
+      -  2. **Partially Connected**: Some connections between neurons may be missing, which can reduce the complexity of the model and improve generalization.
+
+
+- **Characteristics**:
+  - The network is **feedforward**, meaning data flows from the input layer to the output layer without any feedback loops.
+  - The presence of hidden layers allows the network to model complex, non-linear relationships.
+
+- **Example**:
+  - Figure 14 shows a **10–4–2 network**:
+    - 10 input nodes (source nodes).
+    - 4 neurons in the hidden layer.
+    - 2 neurons in the output layer.
+  - This network is **fully connected**, meaning each neuron in one layer is connected to every neuron in the adjacent forward layer.
+
+- **Advantages**:
+  - Can capture higher-order statistics and global patterns in data.
+  - Versatile and suitable for tasks like image recognition, natural language processing, and regression.
+
+- **Limitations**:
+  - Computationally more intensive than single-layer networks.
+  - Requires larger datasets and more sophisticated training algorithms.
+![image](https://github.com/user-attachments/assets/511ef5c5-4f39-4feb-93a3-72d13012af88)
+
+---
+
+### **3. Recurrent Networks**
+
+  - Recurrent neural networks (RNNs) have feedback loops, allowing information to be fed back into the network.
+  - These networks exhibit **dynamic behavior** because outputs of neurons can influence future computations.
+
+- **Characteristics**:
+  - At least one **feedback loop** is present, distinguishing RNNs from feedforward networks.
+  - May contain hidden neurons, which have feedback connections originating from both hidden and output neurons.
+  - Feedback loops may include **unit-time delay elements** (denoted by z{-1}, introducing temporal dynamics.
+
+- **Types**:
+  - **Without Hidden Neurons**: 
+    -  output neurons feed their signals back into the network, but there are no hidden neurons or self-feedback loops.
+  - **With Hidden Neurons**: 
+    - As in Figure 16, where feedback originates from both hidden and output neurons.
+
+- **Advantages**:
+  - Suitable for processing sequential data or time-series data, such as speech, music, or stock prices.
+  - Can capture temporal dependencies in data.
+
+- **Limitations**:
+  - Training RNNs can be challenging due to issues like vanishing or exploding gradients.
+  - Requires careful initialization and tuning.
+![image](https://github.com/user-attachments/assets/f7785b8f-f119-490d-bc04-5c3e7aedc8c5)
+![image](https://github.com/user-attachments/assets/d286943a-dd9d-4b55-a404-fa943195729f)
+
+
 ## practical issues in neural network training.
 
 Training neural networks can be complex and challenging due to several practical issues. Here are four key issues often encountered:
