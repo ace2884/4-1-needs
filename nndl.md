@@ -307,9 +307,8 @@ Input Image (Height x Width x Depth)
 - Video analysis
 
 
-Recurrent Neural Networks (RNNs) and Convolutional Neural Networks (CNNs) are both deep learning architectures, but they serve different purposes and operate based on different principles. Below is a detailed comparison between the two, followed by their respective diagrams.
 
-### **1. Recurrent Neural Networks (RNNs)**
+## **1. Recurrent Neural Networks (RNNs)**
 
 #### **Purpose**
 - **RNNs** are designed for sequence data, where the input data has a temporal or sequential nature (e.g., time series, speech, text).
