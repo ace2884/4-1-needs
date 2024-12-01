@@ -306,6 +306,45 @@ Input Image (Height x Width x Depth)
 - Face recognition
 - Video analysis
 
+
+### **Recurrent Neural Networks (RNNs) vs Convolutional Neural Networks (CNNs)**
+
+Recurrent Neural Networks (RNNs) and Convolutional Neural Networks (CNNs) are both deep learning architectures, but they serve different purposes and operate based on different principles. Below is a detailed comparison between the two, followed by their respective diagrams.
+
+### **1. Recurrent Neural Networks (RNNs)**
+
+#### **Purpose**
+- **RNNs** are designed for sequence data, where the input data has a temporal or sequential nature (e.g., time series, speech, text).
+- They are well-suited for tasks where the output depends not only on the current input but also on previous inputs in the sequence.
+
+#### **Working**
+- In an RNN, the network contains loops within the network that allow information to persist. It processes inputs sequentially, passing information from one step to the next.
+- At each time step, the RNN takes an input and updates its internal state (memory) based on both the current input and the previous state.
+- The state is updated at each step, allowing the network to capture the temporal dependencies in the input sequence.
+  
+#### **Architecture**
+- The architecture of an RNN includes input, hidden, and output layers. The key feature of RNNs is the **recurrent connections** between the hidden states, meaning each hidden state depends not only on the current input but also on the previous hidden state.
+
+#### **Diagram of an RNN**
+```
+        x1       x2       x3
+         |        |        |
+        [h] ---> [h] ---> [h] ---> output
+        /|\      /|\      /|\
+        | |      | |      | |
+        v v      v v      v v
+      (State)  (State)  (State)
+```
+- `x1, x2, x3` are the inputs at different time steps.
+- The hidden state `[h]` is updated at each time step, and it carries information from previous states.
+  
+#### **Applications**
+- Speech recognition
+- Natural language processing (e.g., language translation, text generation)
+- Time series forecasting
+
+---
+
 ##  **Early Stopping**
 
 **Early Stopping** is a regularization technique used to prevent overfitting in neural networks during the training process. It involves monitoring the model's performance on a validation dataset during training and stopping the training once the model's performance on the validation set starts to deteriorate, even though the performance on the training set might still be improving.
