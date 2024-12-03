@@ -1,12 +1,16 @@
 ## Propagation Channel Models
 
 A propagation channel model, also known as a radio wave propagation model, characterizes radio wave propagation. **It helps predict how a radio signal will travel in a specific environment, considering factors like frequency, distance, and morphology (urban, suburban, rural)**. These models typically predict the path loss of a signal or a transmitter's effective coverage area.
+![Screenshot 2024-12-03 152912](https://github.com/user-attachments/assets/b8475133-72df-40aa-bdea-723f0387bc88)
 
 ### Channel Models for 5G
 
 5G cellular systems will operate at frequencies between 500 MHz to 100 GHz, exceeding the 6 GHz limit of previous LTE and Wi-Fi technologies and their corresponding channel models. **Therefore, accurate radio propagation models are necessary for these higher frequencies, demanding the development of new channel models**. 
 
 The 3GPP (3rd Generation Partnership Project) has recognized this need and approved a study item to investigate channel models for frequencies from 6 GHz to 100 GHz.  This research involves identifying existing information on high frequencies, spectrum mapping, scenarios of interest, measurements, and channel model development.
+
+![Screenshot 2024-12-03 152828](https://github.com/user-attachments/assets/ae48026a-017e-4250-93c7-cd7194d689c8)
+
 
 ### Objectives for New 5G Channel Models
 
@@ -67,7 +71,9 @@ This hierarchical structure involves mapping higher-level channels onto lower-le
 
 **5G NR physical layer data channels are responsible for carrying information across the actual radio interface.** They carry the transport channels, which in turn carry logical channels, but they also include essential physical layer data required for maintaining and optimizing the radio link between the UE and the base station.  **The sources note that these physical channels share similarities with 4G LTE channels but with key updates:** PHICH and PCIICH have been removed, HARQ operation is more flexible, and the downlink control channel (PDCCH) is managed using layer 3 procedures.
 
-### Downlink Physical Channels
+![Screenshot 2024-12-03 152853](https://github.com/user-attachments/assets/4d1dc5e5-39df-4d2f-8cf8-8d4713c4a418)
+
+## Downlink Physical Channels
 
 *   **Physical Downlink Shared Channel (PDSCH):** PDSCH carries data that shares capacity based on time and frequency. This includes various data elements: user data, upper-layer control messages specific to the UE, system information blocks (SIBs), and paging messages.  
     *   **Key features:** 
@@ -92,7 +98,7 @@ This hierarchical structure involves mapping higher-level channels onto lower-le
         *   Utilizes QPSK modulation for robustness. 
         *   Transmits a cell-specific demodulation reference signal (DMRS) pattern that can be used to assist with beamforming.
 
-### Uplink Physical Channels
+## Uplink Physical Channels
 
 *   **Physical Random Access Channel (PRACH):** PRACH is used by UEs for initial access to the network by transmitting a random access preamble. 
     *   **Key features:**
