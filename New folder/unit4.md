@@ -25,36 +25,37 @@ The following are some of the candidate systems being considered as **5G multipl
     *   NOMA could use either **OFDMA** or **DFT-spread OFDM** (Discrete Fourier Transform spread Orthogonal Frequency Division Multiplexing).
 
 
+## **Orthogonal Frequency Division Multiplexing (OFDM)**
+OFDM is a widely used digital communication technique designed to transmit data efficiently and reliably over a range of challenging environments. It divides a wide frequency band into multiple closely spaced, orthogonal subcarriers, each carrying a portion of the overall data. 
 
-## OFDM Technology in 5G Systems
+### **Core Principles of OFDM**
 
-**Orthogonal Frequency Division Multiplexing (OFDM)** is a digital modulation method that has been widely used in wireless communications like WLAN, LTE, DVB-T, and 5G. OFDM is a multi-carrier modulation scheme that breaks the transmission frequency band into several contiguous narrower subbands (carriers). Each carrier is modulated individually, which can be implemented with an inverse fast Fourier transform (IFFT).
+1. **Multi-Carrier Transmission**: OFDM splits the available bandwidth into smaller subcarriers, each modulated independently.
+2. **Orthogonality**: The subcarriers are mathematically orthogonal to each other, ensuring they do not interfere despite being closely spaced.
+3. **Frequency Domain Modulation**: Data is modulated onto subcarriers in the frequency domain using techniques like QAM or PSK.
+4. **Efficient Transformation**: Uses Inverse Fast Fourier Transform (IFFT) at the transmitter and Fast Fourier Transform (FFT) at the receiver for efficient signal processing.
 
-* The **OFDM signal** is more robust over a frequency selective fading channel and eliminates adjacent subcarrier crosstalk because it uses narrow orthogonal subcarriers.
 
-* At the receiver, the **OFDM signal** can be demodulated with a fast Fourier transform (FFT) and equalized with a complex gain on each subcarrier. 
-* Combining **OFDM with MIMO** can improve communication speed without increasing the frequency band.
+### **How OFDM Works**
 
-**5G New Radio (NR)** uses a variety of different frequency bands, with assignments generally done by international agreement, although the numbering is done by 3GPP. 
+1. **Transmitter Side**:
+   - **Input Data**: The input bitstream is divided into smaller blocks.
+   - **Modulation**: Each block modulates a subcarrier in the frequency domain.
+   - **IFFT**: Converts frequency-domain data into a time-domain signal.
+   - **Cyclic Prefix**: Adds redundancy by appending a portion of the end of the signal to the beginning, mitigating inter-symbol interference (ISI).
+   - **Transmission**: Sends the composite signal over the channel.
 
-* The **5G NR** specification is subdivided into two frequency bands: **FR1** (below 6 GHz) and **FR2** (mmWave). Each band has different capabilities.
-* The **maximum channel bandwidth** defined for **FR1** is **100 MHz** due to the limited continuous spectrum in this crowded frequency range.
-* The most commonly used band for **5G** in this range is around **3.5 GHz**.
+2. **Receiver Side**:
+   - **Remove Cyclic Prefix**: Eliminates the cyclic prefix to restore the original signal.
+   - **FFT**: Converts the time-domain signal back to the frequency domain.
+   - **Demodulation**: Recovers the data from individual subcarriers.
 
-**OFDM** was selected as the **waveform** for **Phase 1** of **5G NR**.  **CP-OFDM (Cyclic Prefix OFDM)**, the specific version of OFDM used in **5G NR**, was also selected for the **3GPP Release 15 standard**.
 
-### The Principles of OFDM
 
-An **OFDM signal** aggregates the information from single carrier orthogonal waveforms in the frequency domain into a time domain waveform that can be transmitted wirelessly. **Subcarriers** use either **QPSK** or **QAM** as their primary modulation method.
 
 ![Screenshot 2024-12-03 163413](https://github.com/user-attachments/assets/71447ae0-180f-41cc-ac0c-87db091d07d8)
 
 
-**OFDM** arranges carriers at intervals of **1/symbol time**, so that the amplitude of other subcarriers is **0** when the amplitude of each subcarrier reaches its maximum, thus preventing inter-symbol interference. 
-
-**Multi-carrier transmission OFDM** is also effective in multipath environments because the effects of multipath are concentrated on specific subcarriers compared to single carrier transmission, where the whole transmission is affected by the multipath. 
-
-**OFDM (Orthogonal Frequency Division Multiplexing)** is a digital modulation technique that divides a wideband signal into multiple narrowband subcarriers. These subcarriers are orthogonal to each other, meaning their frequencies are spaced so that they do not interfere with each other. This orthogonality allows for efficient use of the available bandwidth and makes OFDM robust against frequency-selective fading, a common problem in wireless communication channels.
 
 **Key Features of OFDM:**
 
@@ -69,18 +70,6 @@ An **OFDM signal** aggregates the information from single carrier orthogonal wav
 * **5G New Radio (NR):** OFDM continues to be a fundamental modulation technique in 5G NR, further optimized to support wider bandwidths and higher frequencies.
 * **Wi-Fi (Wireless Fidelity):** Many Wi-Fi standards, including the latest versions, utilize OFDM for high-speed data transmission.
 * **Digital Video Broadcasting (DVB):** OFDM is employed in DVB-T (Terrestrial) and DVB-H (Handheld) for digital television broadcasting.
-
-
-
-**Key Requirements for 5G:**
-
-* **Peak Data Rate:** 5G is expected to provide peak data rates of at least 20 Gbps downlink and 10 Gbps uplink per mobile base station, a significant increase over LTE.
-* **Connection Density:** To support massive IoT deployments, 5G should be able to handle at least 1 million connected devices per square kilometer.
-* **Mobility:** 5G must support seamless connectivity for users moving at speeds ranging from 0 km/h to 500 km/h.
-* **Energy Efficiency:** 5G radio interfaces should be energy-efficient both under load and in idle states.
-* **Spectral Efficiency:** 5G aims for a spectral efficiency of 30 bits/Hz downlink and 15 bits/Hz uplink, assuming 8x4 MIMO (8 spatial layers downlink, 4 spatial layers uplink).
-* **Real-World Data Rate:** While peak data rates represent theoretical limits, the 5G specifications target per-user download speeds of 100 Mbps and upload speeds of 50 Mbps in real-world scenarios.
-* **Latency:** Under ideal conditions, 5G networks should offer a maximum latency of just 4 ms, significantly lower than the 20 ms latency typical of LTE.
 
 **advantages**:
 
@@ -112,87 +101,149 @@ The modulation scheme and the general waveform must support the following **key 
 *   Enable the possibility of **energy-efficient communications** by minimizing turn-on times for low data rate devices 
 
 
+## **Discrete Fourier Transforms (DFTs) in OFDM**
+
+**Orthogonal Frequency Division Multiplexing (OFDM)** is a multi-carrier modulation technique used in modern wireless communication systems like Wi-Fi, LTE, and 5G. It divides the available spectrum into multiple closely spaced subcarriers, each modulated independently. 
+
+The **Discrete Fourier Transform (DFT)** and its inverse (IDFT) are key components in OFDM systems, providing efficient implementation of modulation and demodulation. Here's an explanation:
+
+### **How DFTs Work in OFDM**
+
+1. **OFDM Transmission**:
+   - **Input Data**: The input bitstream is divided into smaller blocks. Each block modulates a subcarrier using schemes like QAM or PSK.
+   - **IDFT**: The modulated symbols are converted from the frequency domain to the time domain using the Inverse Discrete Fourier Transform (IDFT). This combines all subcarriers into a single time-domain signal.
+   - **Cyclic Prefix**: To combat inter-symbol interference (ISI), a cyclic prefix (copy of the end of the signal) is added to the beginning of the time-domain signal.
+   - **Transmission**: The time-domain signal is transmitted over the channel.
+
+2. **OFDM Reception**:
+   - **Remove Cyclic Prefix**: The receiver removes the cyclic prefix.
+   - **DFT**: The received signal is converted back from the time domain to the frequency domain using the Discrete Fourier Transform (DFT).
+   - **Demodulation**: The frequency-domain data is demodulated to retrieve the original symbols.
 
 
 
-## DFTs (Discrete Fourier Transforms) in OFDM
+### **Key Features of DFT in OFDM**
 
-* **Orthogonality:** DFTs are used in OFDM to create orthogonal subcarriers, which means the subcarriers do not interfere with each other. This orthogonality is crucial for achieving high spectral efficiency and enabling efficient multiple access schemes like OFDMA. 
-
-* **Modulation and Demodulation:** DFTs are used to modulate data onto the subcarriers at the transmitter and to demodulate the data from the subcarriers at the receiver. This process is computationally efficient due to the availability of fast Fourier transform (FFT) algorithms. 
-
-* **Flexibility in Bandwidth Allocation:** DFT-s-OFDM (also known as SC-FDMA) offers flexibility in bandwidth allocation for different users by changing the number of subcarriers assigned to each user.  This allows the system to adapt to varying data rate requirements.
-
-* **PAPR Reduction in Uplink:** DFT-s-OFDM is often preferred for the uplink due to its lower peak-to-average power ratio (PAPR) compared to CP-OFDM. This is advantageous for mobile devices as it improves power amplifier efficiency and extends battery life.
-
-* **DFT Block Sizes:** The choice of DFT block size affects the flexibility and efficiency of the system. Using block sizes that are a power of 2 allows for efficient FFT implementation. However, to support a wider range of data rates, block sizes may be chosen as products of small numbers, allowing for efficient FFT implementations based on combinations of radix 2, 3, and 5.
+1. **Orthogonality**: Ensures that subcarriers do not interfere with each other.
+2. **Efficient Implementation**: Fast Fourier Transform (FFT), a computationally efficient algorithm, is used to perform DFT and IDFT.
+3. **Multi-carrier System**: Enables simultaneous transmission of data across multiple subcarriers.
 
 
-## Cyclic Prefix OFDM (CP-OFDM) in 5G
 
-**CP-OFDM** is the specific version of **OFDM** used in the **5G NR downlink**, the same waveform that **LTE** adopted for its downlink signal. 
+### **Advantages of DFT in OFDM**
 
-In **CP-OFDM**, the **last part of the OFDM frame data** is added to the **beginning of the OFDM frame**. The **cyclic prefix (CP)** length is chosen to be **greater than the channel delay propagation**.  This technique **overcomes the inter-symbol interference** (ISI) that can result from delays and reflections.  
+1. **Spectral Efficiency**: Close spacing of subcarriers maximizes the use of available bandwidth.
+2. **Resilience to Multipath Fading**: OFDM divides the channel into subcarriers, reducing the impact of fading on individual carriers.
+3. **Simplified Equalization**: In the frequency domain, the equalization process is straightforward compared to the time domain.
+4. **High Data Rates**: Suitable for high-speed data communication.
 
-The **length of the channel delay** is **dependent on the frequency**, and the chosen CP must be long enough to account for both **interferences**. Therefore, the **CP length is adaptive** based on the link conditions.
 
-**key features**
+### **Disadvantages of DFT in OFDM**
 
-* **Mitigating Inter-Symbol Interference (ISI):** The cyclic prefix (CP) is a copy of the end of the OFDM symbol that is added to the beginning of the symbol. It acts as a guard interval to prevent ISI caused by multipath propagation, where delayed signal components from the previous symbol can interfere with the current symbol. 
+1. **Sensitivity to Frequency Offset**: Small frequency mismatches can cause inter-carrier interference (ICI).
+2. **High Peak-to-Average Power Ratio (PAPR)**: Leads to inefficient power amplification.
+3. **Complexity**: Requires additional components like cyclic prefix insertion/removal and FFT operations.
 
-* **Maintaining Subcarrier Orthogonality:** The CP ensures that the number of waveform periods within the delayed OFDM symbol is an integer multiple of the FFT period. This helps maintain the orthogonality of the subcarriers, preventing Inter-Carrier Interference (ICI).
 
-* **Simplified Equalization:** The use of a CP allows the receiver to perform equalization using a simple frequency-domain multiplication.  This avoids the need for complex time-domain equalization techniques.
+##### **Example**
 
-* **Adaptive CP Length:** The length of the CP is chosen to be longer than the maximum delay spread of the channel. The CP length can be adapted based on the channel conditions to optimize performance while minimizing overhead.
+Consider an OFDM system with 4 subcarriers:
 
-* **CP Overhead:** The CP introduces overhead, as it consumes a portion of the available time resources. The overhead is proportional to the CP length and inversely proportional to the OFDM symbol length. The choice of CP length involves a trade-off between ISI/ICI mitigation and overhead.
+1. **Frequency Domain Data**:
+   - Subcarrier 1: \( 1 + j \)
+   - Subcarrier 2: \( -1 + j \)
+   - Subcarrier 3: \( -1 - j \)
+   - Subcarrier 4: \( 1 - j \)
 
-* **CP Design in 5G NR:** The CP design in 5G NR aligns symbols between different subcarrier spacing values and the reference numerology (15 kHz) to ensure compatibility and efficient resource utilization.
+2. **IDFT** (Time Domain Signal):
+   The IDFT maps these subcarriers into a time-domain signal of 4 samples.
+
+3. **Add Cyclic Prefix**:
+   The cyclic prefix adds robustness to multipath effects.
+
+4. **Channel Transmission**:
+   The time-domain signal is transmitted and affected by the channel.
+
+5. **DFT** (Receiver):
+   At the receiver, the DFT reconstructs the original frequency-domain data.
+
+## cyclic prefix (CP)
+
+### *1. Mitigating Inter-Symbol Interference (ISI)*
+
+- In wireless communication, signals reflect off objects like buildings or trees, causing *multipath propagation. Delayed versions of the transmitted signal may interfere with the next symbol, causing **Inter-Symbol Interference (ISI)*.
+
+- A *cyclic prefix (CP)* is a copy of the last part of the symbol added to the beginning. This *guard interval* absorbs delayed signals from the previous symbol, ensuring they don’t interfere with the current one.
+
+- Imagine typing letters on a line with a delay between strokes. If you start typing the next line too soon, letters from the previous line might overlap with the new line. Adding a blank space (CP) between lines prevents this overlap.
+
+
+
+### *2. Maintaining Subcarrier Orthogonality*
+
+
+- In OFDM, subcarriers are *orthogonal* to avoid interfering with each other. Delayed signals can disturb this orthogonality, leading to *Inter-Carrier Interference (ICI)*.
+
+
+- CP ensures that the delayed signal aligns perfectly within the *FFT window*. This alignment ensures the orthogonality of subcarriers is maintained.
+
+- Think of a group of synchronized swimmers (subcarriers) performing in harmony (orthogonality). If echoes from their movements disrupt timing, synchronization (orthogonality) is lost. CP is like a time adjustment ensuring the echoes align with the swimmers’ movements.
+
+
+
+### *3. Simplified Equalization*
+
+
+- Without CP, multipath effects make the signal processing at the receiver complex, requiring *time-domain equalization* to correct distortions.
+
+
+- CP simplifies equalization by transforming the channel into a *circular convolution. This allows the receiver to apply a simple **frequency-domain multiplication* to equalize the signal.
+
+
+- Imagine tuning a radio station with static. Without CP, you need to carefully adjust multiple dials (complex equalization). With CP, you just need to press a single button to cancel the static (simple equalization).
+
+
+
+### *4. Adaptive CP Length*
+
+
+- The length of the CP must be longer than the *maximum delay spread* of the channel to fully absorb reflected signals. However, longer CPs increase overhead, reducing spectral efficiency.
+
+
+- In a dense city, signals reflect off many buildings, requiring a *longer CP* to handle delays. In an open field with fewer reflections, a *shorter CP* suffices, reducing overhead.
+
+
+
+### *5. CP Overhead*
+
+
+- The CP consumes time that could carry data, introducing overhead. The trade-off is between mitigating ISI/ICI and maximizing data transmission efficiency.
+
+
+- If a delivery truck has a 10-hour window (symbol duration) but spends 1 hour at checkpoints (CP), only 9 hours are used for actual delivery (data transmission). Longer checkpoints (CP) ensure safe delivery but reduce efficiency.
+
+
+
+### **What are the Key Factors to Determining CP Length?**
+
+The cyclic prefix (CP) is a crucial element in OFDM systems like 5G NR, helping mitigate the adverse effects of multipath propagation. The length of the CP is a critical parameter that influences system performance.
+
+* **Multipath Delay Spread:** The length of the CP is directly proportional to the multipath delay spread of the channel. A longer delay spread, indicating a greater difference in arrival times for multipath components, requires a longer CP to prevent inter-symbol interference (ISI).
+* **OFDM Symbol Length:** For a given OFDM symbol length, a longer CP reduces the proportion of the symbol dedicated to actual data transmission. This trade-off must be considered to balance ISI mitigation with overall data rate.
+* **System Overhead:** A longer CP increases the overhead associated with each OFDM symbol, reducing the effective data rate.
+
+
+
+
+Imagine a 5G network streaming a live sports event to users in a city:  
+1. *Mitigating ISI:* The CP absorbs delays caused by signals reflecting off skyscrapers, ensuring no frame overlaps with the next.  
+2. *Maintaining Orthogonality:* The CP ensures each subcarrier (audio, video, subtitles) remains synchronized, avoiding interference.  
+3. *Simplified Equalization:* The receiver easily compensates for channel effects, maintaining smooth playback.  
+4. *Adaptive CP Length:* The system adapts the CP length for users in dense urban areas (longer CP) versus suburban areas (shorter CP).  
+5. *Overhead Management:* The CP balances delay protection and bandwidth usage for optimal efficiency.
 
 
 ![Screenshot 2024-12-03 162630](https://github.com/user-attachments/assets/50a92ca1-01ed-4780-ae32-f42b7ec2700f)
-
-#### Differences Between 4G and 5G Uplinks:
-
-The **5G NR uplink** uses a **different format** than the 4G LTE uplink. The 5G NR uplink uses **CP-OFDM and DFT-S-OFDM-based waveforms**, providing the use of a **flexible subcarrier space**.  
-
-While **LTE subcarriers** typically have **15 kHz separation**, 5G NR allows for subcarriers to be separated at **15 kHz x 2s**, with a **maximum separation of 240 kHz**. To preserve orthogonality of the carriers, **integral carrier separation** is required instead of fractional carrier separation.
-
-#### Why Flexible Carrier Spacing?
-
-**Flexible carrier spacing** adequately supports the various **spectrum bands/types and deployment models** that 5G NR needs to accommodate. For example:
-
-* 5G NR must operate on **mmWave bands**, which have **wider channel widths** (up to 400 MHz).  
-
-The **3GPP 5G NR Release-15 specification** details the **scalable OFDM numerology** with a 2s scale of subcarrier spacing that can scale with the channel width.  
-
-As a result:
-
-* The **FFT size is scaled**, preventing unnecessary processing complexity increases for **wider bandwidths**.
-* Flexible carrier space provides additional **resistance to phase noise effects** within the system.
-
-
-#### Why CP-OFDM for 5G New Radio?
-
-thE **Ericsson Research** fully endorses **3GPP's** choice to use the **CP-OFDM** waveform for **5G New Radio**. Their research indicated that **CP-OFDM** was the most suitable candidate for NR because:
-
-* **Compatibility** with multiple antenna technologies.
-* **High spectral efficiency**.
-* **Low implementation complexity**.
-* **Well-localized** in the time domain, which is important for:
-    * **Latency-critical applications**.
-    * **TDD implementations**. 
-* More **resistant to oscillator phase noise and Doppler** than other multi-carrier waveforms.
-    * **Robustness to phase noise** is critical for operation at **high carrier frequencies** (e.g. mmWave band).
-
-While OFDM has two main drawbacks:
-
-* Less **frequency localization**.
-* **High peak-to-average power ratio (PAPR)**.
-
-Simple, well-established techniques, such as **clipping and filtering**, can reduce PAPR and improve frequency localization. These techniques can be easily applied to **CP-OFDM at the transmitter** independent of the receiver. 
-
 
 
 
@@ -251,17 +302,6 @@ On the receiver side, the process is reversed:
 
 
 
-
-## **What are the Key Factors to Determining CP Length?**
-
-The cyclic prefix (CP) is a crucial element in OFDM systems like 5G NR, helping mitigate the adverse effects of multipath propagation. The length of the CP is a critical parameter that influences system performance.
-
-* **Multipath Delay Spread:** The length of the CP is directly proportional to the multipath delay spread of the channel. A longer delay spread, indicating a greater difference in arrival times for multipath components, requires a longer CP to prevent inter-symbol interference (ISI).
-* **OFDM Symbol Length:** For a given OFDM symbol length, a longer CP reduces the proportion of the symbol dedicated to actual data transmission. This trade-off must be considered to balance ISI mitigation with overall data rate.
-* **System Overhead:** A longer CP increases the overhead associated with each OFDM symbol, reducing the effective data rate.
-
-
-
 ## **Multipath Signal Transmission.**
 
 **Multipath signal transmission** occurs when a transmitted signal arrives at the receiver through multiple paths. This phenomenon is prevalent in wireless communication environments due to reflections, diffraction, and scattering of radio waves by obstacles such as buildings, trees, and terrain.
@@ -283,6 +323,8 @@ The cyclic prefix (CP) is a crucial element in OFDM systems like 5G NR, helping 
 * **Cyclic Prefix (CP) in OFDM:** Adding a CP to OFDM symbols helps mitigate ISI by providing a guard interval for delayed multipath components.
 * **Equalization:** Equalization techniques at the receiver can compensate for the effects of multipath by adjusting the amplitude and phase of received signal components.
 * **Diversity Techniques:** Diversity techniques, such as spatial diversity (using multiple antennas) or frequency diversity, exploit multiple signal paths to improve reliability.
+
+
 
 ## **5G Modulation Schemes: PSK & QAM**
 
