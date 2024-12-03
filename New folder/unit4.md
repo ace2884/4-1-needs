@@ -127,7 +127,16 @@ The modulation scheme and the general waveform must support the following **key 
 
 * **DFT Block Sizes:** The choice of DFT block size affects the flexibility and efficiency of the system. Using block sizes that are a power of 2 allows for efficient FFT implementation. However, to support a wider range of data rates, block sizes may be chosen as products of small numbers, allowing for efficient FFT implementations based on combinations of radix 2, 3, and 5.
 
-## Cyclic Prefix in OFDM
+
+## Cyclic Prefix OFDM (CP-OFDM) in 5G
+
+**CP-OFDM** is the specific version of **OFDM** used in the **5G NR downlink**, the same waveform that **LTE** adopted for its downlink signal. 
+
+In **CP-OFDM**, the **last part of the OFDM frame data** is added to the **beginning of the OFDM frame**. The **cyclic prefix (CP)** length is chosen to be **greater than the channel delay propagation**.  This technique **overcomes the inter-symbol interference** (ISI) that can result from delays and reflections.  
+
+The **length of the channel delay** is **dependent on the frequency**, and the chosen CP must be long enough to account for both **interferences**. Therefore, the **CP length is adaptive** based on the link conditions.
+
+**key features**
 
 * **Mitigating Inter-Symbol Interference (ISI):** The cyclic prefix (CP) is a copy of the end of the OFDM symbol that is added to the beginning of the symbol. It acts as a guard interval to prevent ISI caused by multipath propagation, where delayed signal components from the previous symbol can interfere with the current symbol. 
 
@@ -140,16 +149,6 @@ The modulation scheme and the general waveform must support the following **key 
 * **CP Overhead:** The CP introduces overhead, as it consumes a portion of the available time resources. The overhead is proportional to the CP length and inversely proportional to the OFDM symbol length. The choice of CP length involves a trade-off between ISI/ICI mitigation and overhead.
 
 * **CP Design in 5G NR:** The CP design in 5G NR aligns symbols between different subcarrier spacing values and the reference numerology (15 kHz) to ensure compatibility and efficient resource utilization.
-
-
-## Cyclic Prefix OFDM (CP-OFDM) in 5G
-
-**CP-OFDM** is the specific version of **OFDM** used in the **5G NR downlink**, the same waveform that **LTE** adopted for its downlink signal. 
-
-
-In **CP-OFDM**, the **last part of the OFDM frame data** is added to the **beginning of the OFDM frame**. The **cyclic prefix (CP)** length is chosen to be **greater than the channel delay propagation**.  This technique **overcomes the inter-symbol interference** (ISI) that can result from delays and reflections.  
-
-The **length of the channel delay** is **dependent on the frequency**, and the chosen CP must be long enough to account for both **interferences**. Therefore, the **CP length is adaptive** based on the link conditions.
 
 
 ![Screenshot 2024-12-03 162630](https://github.com/user-attachments/assets/50a92ca1-01ed-4780-ae32-f42b7ec2700f)
@@ -193,6 +192,8 @@ While OFDM has two main drawbacks:
 * **High peak-to-average power ratio (PAPR)**.
 
 Simple, well-established techniques, such as **clipping and filtering**, can reduce PAPR and improve frequency localization. These techniques can be easily applied to **CP-OFDM at the transmitter** independent of the receiver. 
+
+
 
 
 ### DFT-spread-OFDM (DFT-s-OFDM)
