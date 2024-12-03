@@ -11,6 +11,10 @@ The 3GPP (3rd Generation Partnership Project) has recognized this need and appro
 
 ![Screenshot 2024-12-03 152828](https://github.com/user-attachments/assets/ae48026a-017e-4250-93c7-cd7194d689c8)
 
+## Channel Models in Wireless Communications
+
+**Channel models** are used in wireless communications to characterize how radio waves propagate in different environments. They help predict signal behavior and design communication systems. Here are some common types of channel models and their characteristics:
+
 
 ### Objectives for New 5G Channel Models
 
@@ -39,6 +43,31 @@ New 5G channel models need to address the unique requirements of 5G operation, e
 
 
 This hierarchical structure involves mapping higher-level channels onto lower-level channels, ensuring efficient data flow from the protocol stack's top layers down to the physical layer where actual transmission occurs. 
+
+**Channel mapping** in 5G NR involves associating logical channels with transport channels and then mapping those to physical channels for transmission over the air interface. This process is essential for efficient data transfer and resource management. However, 5G NR deployments present unique challenges:
+
+### Challenges:
+
+* **Wider Bandwidths:** 5G NR supports much wider bandwidths than previous generations, requiring more complex channel mapping schemes to accommodate the increased data rates.
+* **Higher Frequencies:** The use of higher frequencies, particularly in the mmWave band, leads to more severe path loss and fading, making channel estimation and mapping more challenging.
+* **Massive MIMO:** The use of massive MIMO with a large number of antennas increases the complexity of channel mapping and requires sophisticated beamforming techniques.
+* **Dynamic Environment:** The 5G environment is highly dynamic, with user mobility and varying channel conditions, demanding adaptive channel mapping strategies.
+* **Diverse Services:** 5G NR needs to support diverse services with different quality of service (QoS) requirements, such as eMBB, uRLLC, and mMTC, necessitating flexible channel mapping to meet these demands.
+
+### Methods to Overcome Challenges:
+
+* **Advanced Channel Estimation Techniques:** Utilize advanced channel estimation techniques that can handle the complexities of wideband, high-frequency channels and massive MIMO systems. Examples include:
+    * Compressed sensing for efficient channel estimation with reduced pilot overhead.
+    * Machine learning algorithms to predict channel dynamics and optimize mapping.
+* **Beamforming Optimization:** Optimize beamforming strategies to mitigate path loss and improve signal quality for specific users or groups of users. This can involve:
+    * Adaptive beamforming that dynamically adjusts beam directions based on channel conditions.
+    * Multi-user beamforming that serves multiple users simultaneously with different beams.
+* **Dynamic Channel Allocation:** Employ dynamic channel allocation schemes that adapt to changing channel conditions and user demands. This can involve:
+    * Frequency-selective scheduling that assigns users to the best available frequency resources.
+    * Time-domain resource allocation that dynamically adjusts transmission time slots.
+* **Network Slicing:** Leverage network slicing to create dedicated virtualized network resources for different services. This allows for optimized channel mapping and resource allocation based on the specific requirements of each slice.
+* **Edge Computing:** Utilize mobile edge computing (MEC) to process channel information and make mapping decisions closer to the user. This reduces latency and enables more responsive channel mapping adaptations.
+
 
 ### NR Logical Channels
 
