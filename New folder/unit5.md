@@ -40,12 +40,12 @@ New 5G channel models need to address the unique requirements of 5G operation, e
 
 This hierarchical structure involves mapping higher-level channels onto lower-level channels, ensuring efficient data flow from the protocol stack's top layers down to the physical layer where actual transmission occurs. 
 
+### NR Logical Channels
+
 **The NR Logical Channels are the highest level within this hierarchy, categorizing data based on its purpose.** They fall into two main categories:
 
 *   **Control Channels:** These channels carry signaling and control information, which is essential for managing the communication link.  They handle tasks like system configuration, paging, and initial access procedures.
 *   **Traffic Channels:** Responsible for transporting user data, these channels handle the actual payload information being exchanged between the user equipment (UE) and the network.
-
-### NR Logical Channels
 
 **Control Channels:**
 
@@ -60,6 +60,11 @@ This hierarchical structure involves mapping higher-level channels onto lower-le
 
 
  ### NR Transport Channels
+ 
+ A transport channel is defined by how and with what characteristics the
+ information is transmitted through the radio interface. From the physical
+ layer, the MAC layer uses services in the form of transport channels. The
+ data in a transport channel is organized in transport blocks.
  
 *   **Broadcast Channel (BCH):**  This downlink-only channel transmits system information from the BCCH logical channel, specifically the Master Information Block (MIB).  It employs a fixed transport format defined in the 5G specifications. 
 *   **Paging Channel (PCH):** A downlink channel designed to carry paging information from the PCCH logical channel, it helps locate UEs whose exact location within the cell is unknown. The PCH supports discontinuous reception (DRX) to help conserve battery power on UEs by scheduling specific times for receiving the PCH. The PCH transmits a single message to cover the entire cell or can use multiple instances with beamforming.
