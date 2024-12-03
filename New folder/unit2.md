@@ -127,7 +127,8 @@ dynamically installing custom architectures. To this end, the 5GPP effort has
 *   **Isolated Management and Orchestration:**  The platform can execute management and orchestration code specific to each tenant's services and functions in isolation. This ensures that each tenant's network slice operates independently without interference from others.
 *   **Resource Sharing and Reuse:** Services and functions can be configured to indicate whether they have multi-tenant capabilities and can be reused between tenants. This allows for efficient resource utilization and minimizes the need for duplicate infrastructure.
 *   **Network Slicing Design Paradigm:**  The sources identify three key aspects of multi-tenancy within the context of 5G network slicing:
-         ![Screenshot 2024-12-03 143409](https://github.com/user-attachments/assets/6bd19500-dc03-4a88-aa46-44e1a618e4c1)
+      
+     ![Screenshot 2024-12-03 143409](https://github.com/user-attachments/assets/6bd19500-dc03-4a88-aa46-44e1a618e4c1)
 
      *   **Infrastructure Sharing:** Addresses scalability concerns and provides fast resource provisioning times through cloud computing. The SDN concept is applied to enable infrastructure sharing between multiple operators.
     *   **Spectrum Sharing:** Leverages dynamic spectrum access to enhance spectrum efficiency and mitigate spectrum shortages. This involves cooperative spectrum sharing mechanisms and incentive-based approaches to optimize spectrum allocation and pricing.
@@ -169,7 +170,8 @@ dynamically installing custom architectures. To this end, the 5GPP effort has
     *   Data caching
 
 *   By implementing services and caching content at the network edge, **MEC alleviates congestion on core networks, enabling them to efficiently serve local needs**.
-![Screenshot 2024-12-03 143941](https://github.com/user-attachments/assets/7f8c6314-b6c5-4c81-951b-eec1ad305144)
+
+   ![Screenshot 2024-12-03 143941](https://github.com/user-attachments/assets/7f8c6314-b6c5-4c81-951b-eec1ad305144)
 
 ### Traffic Offloading Function (TOF): Optimizing Data Flow
 
