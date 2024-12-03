@@ -150,3 +150,16 @@ These technologies work in synergy to deliver the enhanced performance, flexibil
 
 *   **Satellite Access:** 5G could be used to deliver satellite transmission to fill in coverage gaps in remote or neglected areas.
 
+
+## Licensed vs. Unlicensed Spectrum
+
+| Feature | Licensed Spectrum | Unlicensed Spectrum |
+|---|---|---|
+| **Ownership** | Owned and managed by government or regulatory bodies | Available for public use without exclusive licenses |
+| **Access** | Exclusive access granted to licensees through auctions or other allocation processes | Open and shared access, typically following specific rules and etiquette |
+| **Cost** | Often expensive to acquire, with high licensing fees | Free to use, but equipment and deployment costs may apply |
+| **Interference** | Less prone to interference as licensees have exclusive rights to specific frequencies | More susceptible to interference due to shared access and potential for congestion |
+| **Regulation** | Heavily regulated with strict rules for operation and power limits | Lightly regulated, often with technical standards and guidelines but less strict enforcement |
+| **Applications** | Cellular networks (4G, 5G), broadcasting, satellite communications, critical infrastructure | Wi-Fi, Bluetooth, cordless phones, IoT devices, short-range communications |
+| **Examples** | The 3.5 GHz band used for 5G deployments in many countries | The 2.4 GHz and 5 GHz bands used for Wi-Fi |
+
