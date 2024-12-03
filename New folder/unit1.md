@@ -1,10 +1,9 @@
-### Importance of 5G Wireless Communication
+## Importance of 5G Wireless Communication
 
 *  **Transformation of Industries:** 5G's capabilities are expected to significantly impact various industries, including automotive, healthcare, manufacturing, and entertainment, by enabling new applications and services.
 *  **Enhanced Mobile Broadband:** 5G will enable faster speeds, lower latency, and increased capacity, enhancing existing mobile internet experiences and enabling new immersive technologies.
 *  **Mission-Critical Communications:** Ultra-reliable and low-latency communication facilitated by 5G is crucial for applications like remote control of critical infrastructure, autonomous vehicles, and remote surgery.
 *  **Massive IoT Connectivity:** 5G's ability to support a massive number of connected devices with varying data rate requirements is essential for the growth of the Internet of Things.
-
 
   
 ## Performance of 5G Wireless Communication
