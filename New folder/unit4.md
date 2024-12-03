@@ -233,8 +233,6 @@ The cyclic prefix (CP) is a crucial element in OFDM systems like 5G NR, helping 
 * **System Overhead:** A longer CP increases the overhead associated with each OFDM symbol, reducing the effective data rate.
 
 
-
-
 Imagine a 5G network streaming a live sports event to users in a city:  
 1. *Mitigating ISI:* The CP absorbs delays caused by signals reflecting off skyscrapers, ensuring no frame overlaps with the next.  
 2. *Maintaining Orthogonality:* The CP ensures each subcarrier (audio, video, subtitles) remains synchronized, avoiding interference.  
@@ -247,7 +245,7 @@ Imagine a 5G network streaming a live sports event to users in a city:
 
 
 
-### DFT-spread-OFDM (DFT-s-OFDM)
+## DFT-spread-OFDM (DFT-s-OFDM)
 
 DFT-spread-OFDM (Discrete Fourier Transform spread Orthogonal Frequency Division Multiplexing) is a communication technique that combines **Single Carrier Frequency Division Multiple Access (SC-FDMA)** with the advantages of **Orthogonal Frequency Division Multiplexing (OFDM)**. It is widely used in **uplink transmission in LTE (Long Term Evolution)** due to its low Peak-to-Average Power Ratio (PAPR).
 
