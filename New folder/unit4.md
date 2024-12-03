@@ -1,4 +1,4 @@
-### 5G Multiple Access Schemes
+## 5G Multiple Access Schemes
 
 A key element of any cellular communication system is the **multiple access technology** used.  **5G multiple access schemes** are being carefully considered to ensure that the best techniques are adopted. 
 
@@ -54,9 +54,33 @@ An **OFDM signal** aggregates the information from single carrier orthogonal wav
 
 **Multi-carrier transmission OFDM** is also effective in multipath environments because the effects of multipath are concentrated on specific subcarriers compared to single carrier transmission, where the whole transmission is affected by the multipath. 
 
-**CP-OFDM** adds a higher level signal known as a **cyclic prefix** to the beginning of the **OFDM symbol**. 
+**OFDM (Orthogonal Frequency Division Multiplexing)** is a digital modulation technique that divides a wideband signal into multiple narrowband subcarriers. These subcarriers are orthogonal to each other, meaning their frequencies are spaced so that they do not interfere with each other. This orthogonality allows for efficient use of the available bandwidth and makes OFDM robust against frequency-selective fading, a common problem in wireless communication channels.
 
-* **CP-OFDM** suppresses inter-symbol interference (ISI) and inter-carrier interference (ICI) by inserting data from the end of the OFDM symbol as the cyclic prefix to the beginning of the OFDM symbol for a specific period of time.
+**Key Features of OFDM:**
+
+* **Multi-Carrier Modulation:** OFDM transmits data over multiple parallel subcarriers, improving data rate and resilience to fading.
+* **Orthogonality:** The subcarriers are carefully spaced to ensure they do not interfere with each other, enabling efficient spectral usage.
+* **IFFT/FFT Implementation:** OFDM modulation and demodulation are implemented using Inverse Fast Fourier Transform (IFFT) at the transmitter and Fast Fourier Transform (FFT) at the receiver, allowing for efficient processing.
+* **Resistance to Multipath Fading:** By dividing the signal into narrowband subcarriers, OFDM effectively mitigates the impact of multipath propagation, where signals arrive at the receiver at different times due to reflections and scattering.
+
+**Applications of OFDM:**
+
+* **4G LTE (Long-Term Evolution):** OFDM is a key technology in 4G LTE, enabling high data rates and improved spectral efficiency.
+* **5G New Radio (NR):** OFDM continues to be a fundamental modulation technique in 5G NR, further optimized to support wider bandwidths and higher frequencies.
+* **Wi-Fi (Wireless Fidelity):** Many Wi-Fi standards, including the latest versions, utilize OFDM for high-speed data transmission.
+* **Digital Video Broadcasting (DVB):** OFDM is employed in DVB-T (Terrestrial) and DVB-H (Handheld) for digital television broadcasting.
+
+
+
+**Key Requirements for 5G:**
+
+* **Peak Data Rate:** 5G is expected to provide peak data rates of at least 20 Gbps downlink and 10 Gbps uplink per mobile base station, a significant increase over LTE.
+* **Connection Density:** To support massive IoT deployments, 5G should be able to handle at least 1 million connected devices per square kilometer.
+* **Mobility:** 5G must support seamless connectivity for users moving at speeds ranging from 0 km/h to 500 km/h.
+* **Energy Efficiency:** 5G radio interfaces should be energy-efficient both under load and in idle states.
+* **Spectral Efficiency:** 5G aims for a spectral efficiency of 30 bits/Hz downlink and 15 bits/Hz uplink, assuming 8x4 MIMO (8 spatial layers downlink, 4 spatial layers uplink).
+* **Real-World Data Rate:** While peak data rates represent theoretical limits, the 5G specifications target per-user download speeds of 100 Mbps and upload speeds of 50 Mbps in real-world scenarios.
+* **Latency:** Under ideal conditions, 5G networks should offer a maximum latency of just 4 ms, significantly lower than the 20 ms latency typical of LTE.
 
 **advantages**:
 
@@ -168,3 +192,92 @@ Simple, well-established techniques, such as **clipping and filtering**, can red
 
 * **CP Design in 5G NR:** The CP design in 5G NR aligns symbols between different subcarrier spacing values and the reference numerology (15 kHz) to ensure compatibility and efficient resource utilization.
 
+
+
+### DFT-spread-OFDM (DFT-s-OFDM)
+
+DFT-spread-OFDM (Discrete Fourier Transform spread Orthogonal Frequency Division Multiplexing) is a communication technique that combines **Single Carrier Frequency Division Multiple Access (SC-FDMA)** with the advantages of **Orthogonal Frequency Division Multiplexing (OFDM)**. It is widely used in **uplink transmission in LTE (Long Term Evolution)** due to its low Peak-to-Average Power Ratio (PAPR).
+
+
+#### **Key Concepts:**
+1. **OFDM Basics**:
+   - OFDM divides the bandwidth into multiple orthogonal subcarriers, each carrying a part of the data.
+   - High PAPR is a disadvantage for uplink transmission because it strains the power amplifier.
+
+2. **DFT-Spread Process**:
+   - DFT-s-OFDM preprocesses data symbols using the DFT operation before mapping them onto the OFDM subcarriers.
+   - This spreading reduces PAPR, making it suitable for power-efficient uplink communications.
+
+3. **Advantages**:
+   - Combines the low PAPR characteristics of single-carrier modulation.
+   - Retains the robustness against multipath fading offered by OFDM.
+
+4. **Applications**:
+   - Used in LTE and 5G for uplink transmission.
+   - Efficient for power-constrained devices.
+
+
+
+### **DFT-s-OFDM Block Diagram**
+Below is a simplified sketch of the system:
+
+```plaintext
+Input Data  --->  DFT  --->  Subcarrier Mapping  --->  IFFT  --->  Cyclic Prefix Addition  --->  Transmitter
+                               (Mapping symbols on
+                                 OFDM subcarriers)
+
+Receiver --->  Cyclic Prefix Removal --->  FFT ---> Subcarrier Demapping ---> IDFT ---> Recovered Data
+```
+
+#### **Steps in DFT-s-OFDM:**
+1. **Input Data**: The data symbols are taken from a modulation scheme (e.g., QPSK, 16-QAM).
+2. **DFT Operation**:
+   - A small DFT block spreads the input data symbols across the frequency domain.
+3. **Subcarrier Mapping**:
+   - The DFT output is mapped onto the subcarriers in the OFDM system.
+4. **IFFT Operation**:
+   - Converts the frequency-domain signal to the time domain.
+5. **Cyclic Prefix Addition**:
+   - A cyclic prefix is added to combat inter-symbol interference (ISI) caused by multipath propagation.
+6. **Transmission**: The signal is transmitted over the channel.
+
+On the receiver side, the process is reversed:
+1. **Cyclic Prefix Removal**: The cyclic prefix is removed.
+2. **FFT**: Converts the received signal back to the frequency domain.
+3. **Subcarrier Demapping**: Extracts the data from mapped subcarriers.
+4. **IDFT**: Recovers the original data in the time domain.
+
+
+
+
+## **What are the Key Factors to Determining CP Length?**
+
+The cyclic prefix (CP) is a crucial element in OFDM systems like 5G NR, helping mitigate the adverse effects of multipath propagation. The length of the CP is a critical parameter that influences system performance.
+
+* **Multipath Delay Spread:** The length of the CP is directly proportional to the multipath delay spread of the channel. A longer delay spread, indicating a greater difference in arrival times for multipath components, requires a longer CP to prevent inter-symbol interference (ISI).
+* **OFDM Symbol Length:** For a given OFDM symbol length, a longer CP reduces the proportion of the symbol dedicated to actual data transmission. This trade-off must be considered to balance ISI mitigation with overall data rate.
+* **System Overhead:** A longer CP increases the overhead associated with each OFDM symbol, reducing the effective data rate.
+
+
+
+## **Multipath Signal Transmission.**
+
+**Multipath signal transmission** occurs when a transmitted signal arrives at the receiver through multiple paths. This phenomenon is prevalent in wireless communication environments due to reflections, diffraction, and scattering of radio waves by obstacles such as buildings, trees, and terrain.
+
+**Characteristics of Multipath Transmission:**
+
+* **Delayed Arrival:** Multipath components arrive at the receiver with different delays due to varying path lengths.
+* **Amplitude Variations:** The amplitude of each multipath component can differ based on the attenuation experienced along the path.
+* **Phase Shifts:** The phase of each multipath component can vary due to the different distances traveled.
+* **Frequency Selectivity:** Multipath propagation can cause frequency selectivity, where certain frequency components of the signal experience more attenuation than others.
+
+**Impact of Multipath on Communication:**
+
+* **Inter-Symbol Interference (ISI):** Delayed multipath components can overlap with subsequent symbols, causing ISI and degrading signal quality.
+* **Fading:** Multipath components can combine constructively or destructively at the receiver, leading to signal fading.
+
+**Mitigation Techniques:**
+
+* **Cyclic Prefix (CP) in OFDM:** Adding a CP to OFDM symbols helps mitigate ISI by providing a guard interval for delayed multipath components.
+* **Equalization:** Equalization techniques at the receiver can compensate for the effects of multipath by adjusting the amplitude and phase of received signal components.
+* **Diversity Techniques:** Diversity techniques, such as spatial diversity (using multiple antennas) or frequency diversity, exploit multiple signal paths to improve reliability.
