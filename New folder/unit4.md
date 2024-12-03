@@ -325,6 +325,12 @@ On the receiver side, the process is reversed:
 * **Diversity Techniques:** Diversity techniques, such as spatial diversity (using multiple antennas) or frequency diversity, exploit multiple signal paths to improve reliability.
 
 
+### *Example of Multipath*:
+Imagine you’re at a concert with several loudspeakers. When you listen to the music directly from the stage, it sounds clear. However, if the sound bounces off walls and reaches you a little later, you hear a *delay* or *echo*, which can make it harder to understand the music.
+
+In a *wireless communication* context, the "loudspeakers" are the signal source (e.g., a cell tower), and the "walls" are obstacles that reflect the signal. The delayed reflections can interfere with the original signal, causing the receiver to get multiple versions of the signal at different times, leading to *ISI and fading*.
+
+
 
 ## **5G Modulation Schemes: PSK & QAM**
 
