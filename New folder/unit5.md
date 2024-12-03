@@ -69,7 +69,7 @@ This hierarchical structure involves mapping higher-level channels onto lower-le
 * **Edge Computing:** Utilize mobile edge computing (MEC) to process channel information and make mapping decisions closer to the user. This reduces latency and enables more responsive channel mapping adaptations.
 
 
-### NR Logical Channels
+## NR Logical Channels
 
 **The NR Logical Channels are the highest level within this hierarchy, categorizing data based on its purpose.** They fall into two main categories:
 
@@ -88,7 +88,7 @@ This hierarchical structure involves mapping higher-level channels onto lower-le
 *   **Dedicated Traffic Channel (DTCH):** This bidirectional channel is dedicated to carrying user information (the actual payload) between a specific UE and the network.  It functions after the UE has established an RRC connection. 
 
 
- ### NR Transport Channels
+ ## NR Transport Channels
  
  A transport channel is defined by how and with what characteristics the
  information is transmitted through the radio interface. From the physical
