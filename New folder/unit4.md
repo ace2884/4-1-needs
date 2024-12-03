@@ -83,7 +83,7 @@ OFDM is a widely used digital communication technique designed to transmit data 
 * When the carrier interval is narrow, the OFDM effect is weaker against Doppler shift, making it preferable to use an amplifier with a wide dynamic range. 
 
 
-### Requirements for the 5G Waveform
+## Requirements for the 5G Waveform
 
 The choice of which multiple access scheme or schemes will be used with 5G will ultimately be determined through the ongoing standardization process.**Potential applications** for 5G mobile communications place specific requirements on the 5G waveform in order to provide the needed performance. These applications include the following:
 
