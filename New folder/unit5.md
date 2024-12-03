@@ -36,7 +36,7 @@ New 5G channel models need to address the unique requirements of 5G operation, e
 *   **Transport Channels:** Acting as an intermediary, transport channels manage the multiplexing of logical data for transmission by the physical layer over the radio interface. They prepare the logical channel data for efficient physical transmission. 
 *   **Physical Channels:** Occupying the lowest level of the hierarchy, physical channels are directly responsible for carrying information over the 5G radio interface. They handle the actual transmission of data through the RF signal. They also carry physical layer data, including modulation schemes, reference signals, and transmission power, necessary for maintaining and optimizing the radio link.
 
-**The hierarchy functions by mapping or embedding higher-level channels within lower-level channels. ** This process continues until the physical layer transmits the packaged data over the RF signal. **This systematic approach ensures a logical and manageable flow of data from the top layers of the protocol stack to the physical transmission.**
+**The hierarchy functions by mapping or embedding higher-level channels within lower-level channels.** This process continues until the physical layer transmits the packaged data over the RF signal. **This systematic approach ensures a logical and manageable flow of data from the top layers of the protocol stack to the physical transmission.**
 
 
 ## Mapping Logical Channels in 5G NR
