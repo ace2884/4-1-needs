@@ -139,3 +139,32 @@ While OFDM has two main drawbacks:
 * **High peak-to-average power ratio (PAPR)**.
 
 Simple, well-established techniques, such as **clipping and filtering**, can reduce PAPR and improve frequency localization. These techniques can be easily applied to **CP-OFDM at the transmitter** independent of the receiver. 
+
+
+
+## DFTs (Discrete Fourier Transforms) in OFDM
+
+* **Orthogonality:** DFTs are used in OFDM to create orthogonal subcarriers, which means the subcarriers do not interfere with each other. This orthogonality is crucial for achieving high spectral efficiency and enabling efficient multiple access schemes like OFDMA. 
+
+* **Modulation and Demodulation:** DFTs are used to modulate data onto the subcarriers at the transmitter and to demodulate the data from the subcarriers at the receiver. This process is computationally efficient due to the availability of fast Fourier transform (FFT) algorithms. 
+
+* **Flexibility in Bandwidth Allocation:** DFT-s-OFDM (also known as SC-FDMA) offers flexibility in bandwidth allocation for different users by changing the number of subcarriers assigned to each user.  This allows the system to adapt to varying data rate requirements.
+
+* **PAPR Reduction in Uplink:** DFT-s-OFDM is often preferred for the uplink due to its lower peak-to-average power ratio (PAPR) compared to CP-OFDM. This is advantageous for mobile devices as it improves power amplifier efficiency and extends battery life.
+
+* **DFT Block Sizes:** The choice of DFT block size affects the flexibility and efficiency of the system. Using block sizes that are a power of 2 allows for efficient FFT implementation. However, to support a wider range of data rates, block sizes may be chosen as products of small numbers, allowing for efficient FFT implementations based on combinations of radix 2, 3, and 5.
+
+## Cyclic Prefix in OFDM
+
+* **Mitigating Inter-Symbol Interference (ISI):** The cyclic prefix (CP) is a copy of the end of the OFDM symbol that is added to the beginning of the symbol. It acts as a guard interval to prevent ISI caused by multipath propagation, where delayed signal components from the previous symbol can interfere with the current symbol. 
+
+* **Maintaining Subcarrier Orthogonality:** The CP ensures that the number of waveform periods within the delayed OFDM symbol is an integer multiple of the FFT period. This helps maintain the orthogonality of the subcarriers, preventing Inter-Carrier Interference (ICI).
+
+* **Simplified Equalization:** The use of a CP allows the receiver to perform equalization using a simple frequency-domain multiplication.  This avoids the need for complex time-domain equalization techniques.
+
+* **Adaptive CP Length:** The length of the CP is chosen to be longer than the maximum delay spread of the channel. The CP length can be adapted based on the channel conditions to optimize performance while minimizing overhead.
+
+* **CP Overhead:** The CP introduces overhead, as it consumes a portion of the available time resources. The overhead is proportional to the CP length and inversely proportional to the OFDM symbol length. The choice of CP length involves a trade-off between ISI/ICI mitigation and overhead.
+
+* **CP Design in 5G NR:** The CP design in 5G NR aligns symbols between different subcarrier spacing values and the reference numerology (15 kHz) to ensure compatibility and efficient resource utilization.
+
