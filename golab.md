@@ -262,7 +262,7 @@ func main() {
 }
 ```
 
-## week9 : CHECK WHETHER A STRING IS PALINDROME OR NOT
+## week9 : sum avg 
 
 ```go
 
