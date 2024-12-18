@@ -262,7 +262,7 @@ func main() {
 }
 ```
 
-## week9 : sum avg 
+## week9 : Calculate avg using array
 
 ```go
 
