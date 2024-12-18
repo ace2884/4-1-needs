@@ -88,6 +88,24 @@ func main() {
 }
 ```
 
+## week3 : use struct that is imported from another package
+
+```go
+package main
+import ("fmt" "newpack")
+func main(){
+result:= newpack.square(6)
+fmt.Println("Square of 6 is:", result)
+}
+```
+#### square.go
+```go
+package newpack
+func square(x int) int{
+return x * x
+}
+```
+
 ## week4 : CALCULATE SD IN MATH PACKAGE
 
 ```go
@@ -166,8 +184,83 @@ func main() {
 
 ## week7 : CHECK WHETHER A STRING IS A PALINDROME OR NOT 
 
+```go
+package main
+import "fmt"
+func main(){
+var number, remainder, temp int
+var reverse int=10
+fmt.Print("Enter any positive integer:")
+fmt.Scan(&number)
+temp=number
+for{
+remainder=number%10
+reverse=reverse*10 + remainder
+number%10
+if(number==0){
+break
+}
+}
+if(temp==reverse){
+fmt.Printf("%d is a palindrome",temp)
+}
+else
+{
+fmt.Printf("%d is not a palindrome",)
+}
+}
 ```
+## week8 : build a contact form 
 
+```html
+#html.form
+<!DOCTYPE html>
+<html>
+<head>
+<title> Simple Form Example </title>
+</head>
+<body>
+<h2> Submit Form </h2>
+<form action="/" method="post">
+<label for="name"> Name:</label><br>
+<input type="text" id="name" name="name" required> <br><br>
+
+<label for="email"> Email:</label><br>
+<input type="email" id="email" name="email" required> <br><br>
+
+<label for="email"> Message:</label><br>
+<input type="Message" id="Message" name="Message" required> <br><br>
+
+<input type="reset" value="reset">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+```
+```go
+package main
+import (
+	"fmt"
+	"net/http"
+)
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost {
+			http.ServeFile(w, r, "form.html")
+			return
+		}
+		r.ParseForm() // Parse form data
+		name := r.Form.Get("name")
+		email := r.Form.Get("email")
+		fmt.Println("Name:", name)
+		fmt.Println("Email:", email)
+
+		fmt.Fprintf(w, "Received form submission\nName: %s\nEmail: %s\n", name, email)
+	})
+	fmt.Println("Server is running on localhost:8080")
+	http.ListenAndServe(":8080", nil) // Corrected port specification
+}
+```
 
 ## week9 : CHECK WHETHER A STRING IS PALINDROME OR NOT
 
@@ -186,10 +279,122 @@ fmt.Scanln(&num[i])
 sum += num[i]
 }
 avg = sum/temp
-fmt.Printf("The Average of entered %d number(s) is %d",temp,avg)
+fmt.Printf("The Avg %d number(s) is %d",temp,avg)
 }
 
 ```
 
+## week 10: delete duplicate element in array
+```go
+package main
+import "fmt"
 
+func removeDuplicate(arr[8]int) []int {
+map_var := map[int]bool{}
+	result := []int{}
+	for e := range arr {
+		if map_var[arr[e]] != true {
+		   map_var[arr[e]] = true
+		   result = append(result,arr[e])
+		}
+	}
+	return result
+}
+func main() {
+   arr := [8]int{1,2,2,4,4,5,7,5}
+   fmt.Println("The unsorted array entered is:", arr)
+   result := removeDuplicate(arr)
+   fmt.Println("Thr array obtained after removing the duplicate values is:", result)
+}
+```
 
+## week 11: reverse array sort for integers and strings
+
+```go
+package main
+import ("fmt"
+"sort"
+)
+func main(){
+fmt.Println("Integer Reverse sort")
+num:=[]int { 50,20,10,35,62}
+sort.Sort(sort.Reverse(sort.IntSlice(num)))
+fmt.Println(num)
+fmt.Println("String Reverse Sort")
+text:=[] string{"India", "Australia", "Japan", "Germany"}
+sort.Sort(sort.Reverse(sort.StringSlice(text)))
+fmt.Println(text)
+}
+```
+## week12: contains, contains any, count, equal fold string functions
+
+```go
+package main
+import (
+"fmt"
+"strings"
+)
+func main(){
+fmt.Println(strings.ContainsAny("Germany","G"))
+fmt.Println(strings.ContainsAny("Germany","g"))
+fmt.Println(strings.Contains("Germany","Ger"))
+fmt.Println(strings.Contains("Germany","ger"))
+fmt.Println(strings.Contains("Germany","er"))
+fmt.Println(strings.Count("cheese","e"))
+fmt.Println(strings.EqualFold("Cat","cAt"))
+fmt.Println(strings.EqualFold("India","Indiana"))
+}
+```
+
+## week 14: create multiple go routines 
+
+```
+package main
+import (
+	"fmt"
+	"runtime"
+	"sync"
+)
+func main() {
+	runtime.GOMAXPROCS(3)
+	var processTest sync.WaitGroup
+	processTest.Add(3)
+	
+	go func() {
+		defer processTest.Done()
+		for i := 0; i < 3; i++ {
+			for j := 15; j <= 25; j++ {
+				fmt.Printf(" %d", j)
+				if j == 18{
+					fmt.Println()
+				}
+			}
+		}
+	}()
+
+	go func() {
+		defer processTest.Done()
+		for j := 0; j < 3; j++ {
+			for char := 'A'; char < 'A'+10; char++ {
+				fmt.Printf("%c ", char)
+				if char == 'F' {
+					fmt.Println()
+				}
+			}
+		}
+	}()
+
+	go func() {
+		defer processTest.Done()
+		for i := 0; i < 3; i++ {
+			for j := 0; j <= 15; j++ {
+				fmt.Printf(" %d", j)
+				if j == 10 {
+					fmt.Println()
+				}
+			}
+		}
+	}()
+	processTest.Wait()
+}
+```
