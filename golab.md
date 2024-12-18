@@ -348,7 +348,7 @@ fmt.Println(strings.EqualFold("India","Indiana"))
 
 ## week 14: create multiple go routines 
 
-```
+```go
 package main
 import (
 	"fmt"
